@@ -45,8 +45,15 @@ exports.index = function(req, res) {
 /***********************************
     	User Page
 ***********************************/
-exports.user_index = function(req, res) {};
-exports.user_reservations = function(req, res) {};
+exports.user_index = function(req, res) {
+	couchdb.getUserByUsername(req.params.username.toString(), true, function(user) {
+		res.render('user_index', user);
+	});
+};
+exports.user_reservations = function(req, res) {
+	var output = req.params.username + " made reservation " + req.params.id;
+	res.send(output);	
+};
 exports.user_new_reservations = function(req, res) {};
 
 /***********************************
@@ -56,7 +63,7 @@ exports.venue_index = function(req, res) {};
 exports.venue_reservations = function(req, res) {};
 exports.venue_checkout = function(req, res) {};
 exports.venue_menu = function(req, res) {};
-exports.new_menu = function(req, res) {};
+exports.venue_new_meal = function(req, res) {};
 
 /***********************************
     	User Page

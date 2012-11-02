@@ -39,8 +39,28 @@ exports.getUserById = function(id, inflate, cb) {           // tested
             inflateUser(doc.rows[0].value, function(user) {
                 cb(user);
             });
-        else
-            cb(doc.rows[0].value);
+        else {
+            if(doc.rows.length > 0)
+                cb(doc.rows[0].value);
+            else
+                cb(null)
+        }   
+    });
+} // _design/users/_view/all?id=###
+
+exports.getUserByUsername = function(id, inflate, cb) {          // tested
+    db.view("users", 'username', {key: id}, function(err, doc) {
+        if(err) throw new Error("getUserByUsername " + err);
+        if(inflate)
+            inflateUser(doc.rows[0].value, function(user) {
+                cb(user);
+            });
+        else {
+            if(doc.rows.length > 0)
+                cb(doc.rows[0].value);
+            else
+                cb(null)
+        }   
     });
 } // _design/users/_view/all?id=###
     
@@ -71,7 +91,7 @@ exports.getUserById = function(id, inflate, cb) {           // tested
                 user.reviews = reviews;
                 each(user.venues)
                     .on('item', function(next, venue, index) {
-                        exports.getVenueById(venue.venue_id, function(new_venue) {
+                        exports.getVenueById(venue.venue_id, false, function(new_venue) {
                             venues.push(new_venue);
                             next();
                         });
@@ -111,10 +131,15 @@ exports.getVenueById = function(id, inflate, cb) {                     // tested
         if(err) throw new Error("getVenueById " + err);
         if(inflate)
             inflateVenue(doc.rows[0].value, function(venue) {
+                console.log(venue);
                 cb(venue);
             });
-        else
-            cb(doc.rows[0].value);
+        else {
+            if(doc.rows.length > 0)
+                cb(doc.rows[0].value);
+            else
+                cb(null)
+        }   
     });
 }
 
@@ -179,7 +204,12 @@ exports.getMealById = function(id, cb) {                   // tested
 
     db.view("meals", 'all', {key: id}, function(err, doc) {
         if(err) throw new Error("getMealById " + err);
-        cb(doc.rows[0].value);
+        else {
+            if(doc.rows.length > 0)
+                cb(doc.rows[0].value);
+            else
+                cb(null)
+        }   
     });
 }
 
@@ -203,8 +233,13 @@ exports.getAllReviews = function(cb) {                   // tested
 }
 exports.getReviewById = function(id, cb) {                // tested
     db.view("reviews", 'all', function(err, doc) {
-        //if(err) throw new Error("getVenueById " + err);
-        cb(doc.rows[0].value);
+        if(err) throw new Error("getVenueById " + err);
+        else {
+            if(doc.rows.length > 0)
+                cb(doc.rows[0].value);
+            else
+                cb(null)
+        }   
     });
 }
 
@@ -230,7 +265,12 @@ exports.getReservationById = function(id, cb) {
     db.view("reservations", 'all', {key: id}, function(err, doc) {
         if(err) throw new Error("getReservationById " + err);
         
-        cb(doc.rows[0].value);
+        else {
+            if(doc.rows.length > 0)
+                cb(doc.rows[0].value);
+            else
+                cb(null)
+        }   
     });
 }
 

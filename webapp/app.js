@@ -66,13 +66,13 @@ app.get('/', routes.index);
 // Users
 app.get(app.lookupRoute('user.index'), routes.user_index);
 app.get(app.lookupRoute('user.reservations'), routes.user_reservations);
-app.get(app.lookupRoute('user.new_reservations'), routes.user_new_reservations);
+app.get(app.lookupRoute('user.new_reservation'), routes.user_new_reservations);
 // Venues
 app.get(app.lookupRoute('venue.index'), routes.venue_index);
 app.get(app.lookupRoute('venue.reservations'), routes.venue_reservations);
-app.get(app.lookupRoute('venue.checkout'), routes.venue_checkout
+app.get(app.lookupRoute('venue.checkout'), routes.venue_checkout);
 app.get(app.lookupRoute('venue.menu'), routes.venue_menu);
-app.get(app.lookupRoute('venue.new_menu'), routes.new_menu);
+app.get(app.lookupRoute('venue.new_meal'), routes.venue_new_meal);
 // Auth
 app.get(app.lookupRoute('auth.login'), routes.login);
 app.get(app.lookupRoute('auth.logout'), routes.logout);
