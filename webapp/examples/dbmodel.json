@@ -1,0 +1,104 @@
+// User
+{
+	"id" : "1",
+	"username" : "film42",
+	"name" : {
+		"first_name" : "garrett",
+		"last_name" : "thornburg"
+	},
+	"reviews" : [
+		{"review_id" : "1" },
+		{"review_id" : "2" }
+	],
+	"venues" : [
+		{"venue_id": "1"} // My french vegan home
+	],
+	"description" : "this is my bio",
+	"email" : "film42@gmail.com",
+	"password" : "plaint text",
+	"created_date" : "linux_time_stamp?",
+	"photo_url" : "http://werierwer or blob?",
+	"type" : "user"
+}
+
+// Venue 
+{
+	"id" : "1",
+	"user_id" : "1", // film42
+	"active" : "true", // open for offers
+	"name" : "My french vegan home",
+	"description" : "Desc about it",
+	"photo_url" : "url / blob?",
+	"meals" : [
+		{"meal_id" : "1"},
+		{"meal_id" : "2"}
+	],
+	"guest_limit" : {
+		"minimum" : "4",
+		"maximum" : "10"
+	},
+	"specialties" : [
+		{"specialty" : "vegan"},
+		{"specialty" : "steak"}
+	],
+	"availibilty_dates": [
+		{ "date" : "linux_time_stamp" }, // Thurs 7
+		{ "date" : "linux_time_stamp" }, // Wed 7
+		{ "date" : "linux_time_stamp" }  //  7
+	],
+	"location" : {
+		"street" : "400N 310E",
+		"zip" : "84601",
+		"city" : "Provo",
+		"state" : "Utah",
+		"country" : "USA"
+	},
+	"reviews" : [
+		{"review_id" : "1" },
+		{"review_id" : "4" }
+	],
+	"created_date" : "linux_time_stamp",
+	"type" : "venue"
+}
+
+// Meal
+{
+	"id" : "1",
+	"venue_id" : "1", // My french vegan home
+	"name" : "Vegane Paradise",
+	"styles" : [  	  //basically tags
+		{"style" : "italian"},
+		{"style" : "french"},
+		{"style" : "creamy"}
+	],
+	"description" : "fany wording + safety info",
+	"photo_url" : "link or blob?",
+	"price" : "$100",
+	"created_date" : "linux_time_stamp",
+	"type" : "meal"
+}
+
+// Reservation
+{
+	"id" : "1",
+	"user_id" : "1",  //film42
+	"venue_id" : "1", // My french vegan home
+	"guest_count" : "4", // max 8, but we need min 4 people
+	"transaction_id" : "eeoi339030j390e309ej3094", // paypal
+	"reservation_date" : "linux_time_stamp",
+	"created_date" : "linux_time_stamp",
+	"type" : "reservation"
+}
+
+// Review
+{
+	"id" : "1",
+	"user_id" : "1",
+	"venue_id" : "1",
+	"reservation_date" : "linux_time_stamp",
+	"comment" : "blank / or something",
+	"rating" : "true", // true = good , bad = false
+	"created_date" : "linux_time_stamp",
+	"type" : "review"
+}
+
