@@ -102,3 +102,13 @@
 	"type" : "review"
 }
 
+// Example return
+{ "total_rows: 2,
+  offset: 0,
+  rows: 
+   [ { id: '9b6418315813427c4fc3114c520009f2',
+       key: '9b6418315813427c4fc3114c520009f2',
+       value: [Object] },
+     { id: 'bf7045d762d1e71db0e36629fb0032b1',
+       key: 'bf7045d762d1e71db0e36629fb0032b1',
+       value: [Object] } ] }
