@@ -63,30 +63,22 @@ app.defineRoute('/blog/new', '/blog/new');
         Routes in Use
 ***********************************/
 app.get('/', routes.index);
+// Users
+app.get(app.lookupRoute('user.index'), routes.user_index);
+app.get(app.lookupRoute('user.reservations'), routes.user_reservations);
+app.get(app.lookupRoute('user.new_reservations'), routes.user_new_reservations);
+// Venues
+app.get(app.lookupRoute('venue.index'), routes.venue_index);
+app.get(app.lookupRoute('venue.reservations'), routes.venue_reservations);
+app.get(app.lookupRoute('venue.checkout'), routes.venue_checkout
+app.get(app.lookupRoute('venue.menu'), routes.venue_menu);
+app.get(app.lookupRoute('venue.new_menu'), routes.new_menu);
+// Auth
+app.get(app.lookupRoute('auth.login'), routes.login);
+app.get(app.lookupRoute('auth.logout'), routes.logout);
+app.get(app.lookupRoute('auth.register'), routes.register);
 
-app.get(app.lookupRoute('/blog'), function(req,res) {
-  res.send("hello");
-});
 
-app.get(app.lookupRoute('/blog/:id'), function(req,res) {
-  res.send(req.params.id);
-});
-
-app.get(app.lookupRoute('/blog/new'), function(req,res) {
-  res.send("new");
-});
-/*
-
-app.get('/users', routes.index);
-app.get('/venues', routes.index);
-
-app.get('/venue/:id/menu', routes.index);
-app.get('/venue/:id/menu/:id', routes.index); // NEEDED????
-
-app.get('/login', routes.index);
-app.get('/logout', routes.index);
-app.get('/register', routes.index);
-*/
 app.listen(3000, function(){
   console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
 });
