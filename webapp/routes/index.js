@@ -23,7 +23,7 @@ exports.searchResults = function(req, res) {
         //var users = { };
         var viewData = { title: 'Search results' };
         viewData.users = users;
-        res.render('results', viewData);
+        res.render('search', viewData);
     });
 };
 
@@ -33,6 +33,6 @@ exports.user = function(req, res) {
         //var user = { name: {first_name:"Byron", last_name: "Hundley"}, photo_url: "//lh4.googleusercontent.com/-gP3mcTlmkFQ/AAAAAAAAAAI/AAAAAAAAAAA/aSzXUf-kBk0/s27-c/photo.jpg"};
         var viewData = { title: 'User' };
         viewData.user = user;
-        res.render('userInfo', viewData);
+        res.render('user', viewData);
     });
 };

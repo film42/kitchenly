@@ -1,0 +1,12 @@
+
+*.xml
+
+webapp/node_modules/jquery/LICENSE-MIT
+
+webapp/node_modules/jquery/README.md
+
+webapp/.idea/workspace.xml
+
+webapp/.idea/workspace.xml
+
+webapp/node_modules/jquery/.npmignore
