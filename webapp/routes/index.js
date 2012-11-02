@@ -6,6 +6,7 @@ var couchdb = require('../custom_modules/dbInterface');
 
 exports.index = function(req, res){
   couchdb.getAllUsers(function(users) {
-  	res.render('index', { title: users.username });
+  	console.log(users);
+  	res.render('index', { title: "hello" });
   });
 };
