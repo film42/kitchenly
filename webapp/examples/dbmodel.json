@@ -83,6 +83,7 @@
 	"id" : "1",
 	"user_id" : "1",  //film42
 	"venue_id" : "1", // My french vegan home
+	"meal_id" : "1",
 	"guest_count" : "4", // max 8, but we need min 4 people
 	"transaction_id" : "eeoi339030j390e309ej3094", // paypal
 	"reservation_date" : "linux_time_stamp",
