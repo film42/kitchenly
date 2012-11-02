@@ -31,15 +31,38 @@ app.configure('production', function(){
   app.use(express.errorHandler());
 });
 
-// Routes
+/***********************************
+        Defined Routes
+***********************************/
+app.defineRoute('search', '/search');
 
-app.get('/', routes.index);
-app.get('/results', routes.searchResults);
-app.get('/user', routes.user);
+app.defineRoute('user', {
+  index: '/user/:username',
+  reservations: '/user/:username/reservations/:id',
+  new_reservation: '/user/:username/reservations/:id/new'
+});
 
-app.defineRoute('/blog', '/blog');
+app.defineRoute('venue', {
+  index: '/venue/:id',
+  reservations: '/venue/:id/reservations',
+  checkout: '/venue/:id/reservations/checkout',
+  menu: '/venue/:id/menu',
+  new_meal: '/venue/:id/menu/new'
+});
+
+app.defineRoute('auth', {
+  login: '/login',
+  logout: '/logout',
+  register: '/register'
+});
+
 app.defineRoute('/blog/:id', '/blog/:id');
 app.defineRoute('/blog/new', '/blog/new');
+
+/***********************************
+        Routes in Use
+***********************************/
+app.get('/', routes.index);
 
 app.get(app.lookupRoute('/blog'), function(req,res) {
   res.send("hello");
@@ -53,18 +76,10 @@ app.get(app.lookupRoute('/blog/new'), function(req,res) {
   res.send("new");
 });
 /*
-app.get('/search', routes.index);
 
 app.get('/users', routes.index);
-app.get('/user/:username', routes.index);
-app.get('/user/:username', routes.index);
-app.get('/user/:username/reservations', routes.index);
-app.get('/user/:username/reservations/new', routes.index);
-
 app.get('/venues', routes.index);
-app.get('/venue/:id', routes.index);
-app.get('/venue/:id/reservations', routes.index);
-app.get('/venue/:id/reservations/checkout', routes.index);
+
 app.get('/venue/:id/menu', routes.index);
 app.get('/venue/:id/menu/:id', routes.index); // NEEDED????
 
