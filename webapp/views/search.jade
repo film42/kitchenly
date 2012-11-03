@@ -1,3 +1,7 @@
+block scripts
+   script(src='http://maps.google.com/maps/api/js?sensor=false')
+   script(src='/scripts/map.js')
+    
 header.site-header 
   div.container
     h1.kitchenly-branding.tk-mic-32-new-web.pull-left 
@@ -21,12 +25,12 @@ div.page-contain.container
         div.navbar-inner
             form.navbar-form.pull-left
                 div#city-picker.input-append.pull-left
-                    input#location.typeahead.span4(type="text", placeholder="Ogden, UT")
+                    input#location.typeahead.span4(type="text", placeholder="What city do you want to eat in?", value="Ogden, UT")
                     span.add-on
                         i.icon-map-marker
                         
                 div#date-picker.input-append.pull-left
-                    input#date-time.span4(type="text", rel="popover", data-placement="bottom", placeholder="Saturday, November 3, 2012")
+                    input#date-time.span4(type="text", rel="popover", data-placement="bottom", placeholder="When do you want to eat?", value="Saturday, November 3rd 2012")
                     span.add-on
                         i.icon-calendar
 
@@ -56,7 +60,7 @@ div.page-contain.container
                   button.btn.btn-primary.span2(type="submit") Search for Dinner
 
     div.search-results-contain
-    div.map
+    div#map-canvas
 
     div.result-grid.container
         div.row.result-row
@@ -107,4 +111,4 @@ div.page-contain.container
                               i.icon-star
                               i.icon-star
                         div.pull-right
-                            a.btn.btn-primary.btn-large(href="#") Book It!
+                            a.btn.btn-primary.btn-large(href="/payment") Book It!
