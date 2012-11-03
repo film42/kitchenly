@@ -167,12 +167,6 @@ h4.result-title {
   text-align: left;
 }
 
-/*.logo-big {
-  height: 280px;
-  width: 280px;
-  background: url('../img/logo-big.png') no-repeat 0 0;
-}*/
-
 #navbar-secondary .navbar-form {
  margin-left: 8px;
 }
@@ -210,7 +204,6 @@ h4.result-title {
 }
 
 #guest-number-picker .btn{
- /* width: 160px;*/
   text-align: left;
 }
 
