@@ -21,24 +21,13 @@ exports.index = function(req, res) {
 
 // Get the search results page.
 exports.search = function(req, res) {
-//    couchdb.getAllUsers(function(users) {
-        var users = { };
+    couchdb.getAllUsers(true, function(users) {
+        console.log(users);
         var viewData = { title: 'Search results' };
         viewData.users = users;
         res.render('search', viewData);
-//    });
-};
-
- /*
-// Get the user details page.
-exports.user = function(req, res) {
-    couchdb.getUserById(req.userId, true, function(user) {
-        //var user = { name: {first_name:"Byron", last_name: "Hundley"}, photo_url: "//lh4.googleusercontent.com/-gP3mcTlmkFQ/AAAAAAAAAAI/AAAAAAAAAAA/aSzXUf-kBk0/s27-c/photo.jpg"};
-        var viewData = { title: 'User' };
-        viewData.user = user;
-        res.render('user', viewData);
     });
-};*/
+};
 
 //exports.index = function(req, res) {
 //  	res.render('index', { title: "hello" });
@@ -73,7 +62,6 @@ exports.venue_new_meal = function(req, res) {};
 exports.login = function(req, res) {};
 exports.logout = function(req, res) {};
 exports.register = function(req, res) {};
-
 
 
 

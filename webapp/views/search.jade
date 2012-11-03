@@ -53,84 +53,29 @@ div.page-contain.container
     div.result-grid.container
         div.row.result-row
 
-            div.span3.result-box
-                img.result-main-img(src="http://placehold.it/140x140")
-                h4.result-title
-                    a(href="#result-modal-1", data-toggle="modal") Dinner Title
-                        span.price-range.pull-right$$$
-                div.venue
-                    i.icon-map-marker.icon-white
-                    span Park City
+            each user in users
+                div.span3.result-box
+                    img.result-main-img(src="http://placehold.it/140x140")
+                    h4.result-title
+                        a(href="#result-modal-1", data-toggle="modal") Dinner Title
+                            span.price-range.pull-right $$$
+                    div.venue
+                        i.icon-map-marker.icon-white
+                        span Park City
 
-                div.result-meta
-                    div.host-bio
-                        img.host-user-img.pull-left(src="img/melissa.png")
-                        div.host-name Melissa Pearl Jones
-                        div.host-rating
-                            i.icon-star.icon-white
-                            i.icon-star.icon-white
-                            i.icon-star.icon-white
-                            i.icon-star.icon-white
-
-            div.span3.result-box
-
-                img.result-main-img(src="http://placehold.it/140x140")
-                h4.result-title
-                    a(href="#result-modal-1", data-toggle="modal") Dinner Title
-                      span.price-range.pull-right $$$
-                div.venue
-                    i.icon-map-marker.icon-white
-                    span Park City
-
-                div.result-meta
-                    div.host-bio
-                        img.host-user-img(src="http://placehold.it/23x23") Bilbo Baggins
-                        span.rating
-                            i.icon-star.icon-white
-                            i.icon-star.icon-white
-                            i.icon-star.icon-white
-                            i.icon-star.icon-white
-
-            div.span3.result-box
-
-                img.result-main-img(src="img/lasagna.jpg")
-                h4.result-title
-                    a(href="#result-modal-1", data-toggle="modal") Dinner Title
-                        span.price-range.pull-right $$$
-                div.venue
-                    i.icon-map-marker.icon-white
-                    span Park City
-
-                div.result-meta
-                    div.host-bio
-                        img.host-user-img(src="http://placehold.it/23x23") Bilbo Baggins
-                        span.rating
-                            i.icon-star.icon-white
-                            i.icon-star.icon-white
-                            i.icon-star.icon-white
-                            i.icon-star.icon-white
-
-            div.span3.result-box
-                img.result-main-img(src="http://placehold.it/140x140")
-                h4.result-title
-                    a(href="#result-modal-1", data-toggle="modal") Dinner Title
-                        span.price-range.pull-right $$$
-                div.venue
-                    i.icon-map-marker.icon-white
-                    span Park City
-
-                div.result-meta
-                    div.host-bio
-                        img.host-user-img(src="http://placehold.it/23x23") Bilbo Baggins
-                        span.rating
-                            i.icon-star.icon-white
-                            i.icon-star.icon-white
-                            i.icon-star.icon-white
-                            i.icon-star.icon-white
+                    div.result-meta
+                        div.host-bio
+                            img.host-user-img.pull-left(src="img/melissa.png")
+                            div.host-name #{user.name.first_name} #{user.name.last_name}
+                            div.host-rating
+                                i.icon-star.icon-white
+                                i.icon-star.icon-white
+                                i.icon-star.icon-white
+                                i.icon-star.icon-white
 
     div#result-modal-1.modal.hide
         div.modal-header
-            button.close(type="button", data-dismiss="modal")&times;
+            button.close(type="button", data-dismiss="modal") &times;
             h3 Dinner Title
             div.location
               i.icon-map-marker
@@ -139,7 +84,8 @@ div.page-contain.container
         div.modal-body
             div.meta
                 div.host-bio
-                  img.host-user-img-big.pull-left(src="img/melissa.png")
+
+                  img.host-user-img-big.pull-left(src="img/melissa.png")//#{user.photo_url}
                   div.host-name Melissa Pearl Jones
                   div.host-rating
                       i.icon-star
