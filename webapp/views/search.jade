@@ -53,19 +53,21 @@ div.page-contain.container
     div.result-grid.container
         div.row.result-row
 
-            each user in users
+            each user, index in users
                 div.span3.result-box
-                    img.result-main-img(src="http://placehold.it/140x140")
-                    h4.result-title
-                        a(href="#result-modal-1", data-toggle="modal") Dinner Title
-                            span.price-range.pull-right $$$
+                    - if (typeof(user.venues) !== 'undefined' && user.venues.length > 0)
+                        img.result-main-img(src="#{user.venues[0].photo_url}")
+                        h4.result-title
+                            a(href="#result-modal-#{index}", data-toggle="modal") #{user.venues[0].name}
+                                span.price-range.pull-right //#{user.venues[0].price}
                     div.venue
                         i.icon-map-marker.icon-white
-                        span Park City
+                        - if (typeof(user.venues) !== 'undefined' && user.venues.length > 0 && user.venues[0].location)
+                            span #{user.venues[0].location.city}, #{user.venues[0].location.state}
 
                     div.result-meta
                         div.host-bio
-                            img.host-user-img.pull-left(src="img/melissa.png")
+                            img.host-user-img.pull-left(src="#{user.photo_url}")
                             div.host-name #{user.name.first_name} #{user.name.last_name}
                             div.host-rating
                                 i.icon-star.icon-white
@@ -73,25 +75,25 @@ div.page-contain.container
                                 i.icon-star.icon-white
                                 i.icon-star.icon-white
 
-    div#result-modal-1.modal.hide
-        div.modal-header
-            button.close(type="button", data-dismiss="modal") &times;
-            h3 Dinner Title
-            div.location
-              i.icon-map-marker
-              span.city-name Park City
-              
-        div.modal-body
-            div.meta
-                div.host-bio
+                div.modal.hide(id="result-modal-#{index}")
+                    div.modal-header
+                        button.close(type="button", data-dismiss="modal") &times;
+                        h3 #{user.venues[0].name}
+                        div.location
+                          i.icon-map-marker
+                          span.city-name #{user.venues[0].location.city}, #{user.venues[0].location.state}
 
-                  img.host-user-img-big.pull-left(src="img/melissa.png")//#{user.photo_url}
-                  div.host-name Melissa Pearl Jones
-                  div.host-rating
-                      i.icon-star
-                      i.icon-star
-                      i.icon-star
-                      i.icon-star
+                    div.modal-body
+                        div.meta
+                            div.host-bio
 
-        div.modal-footer
-            a.btn.btn-primary.btn-large(href="#") Book It!
+                              img.host-user-img-big.pull-left(src="#{user.photo_url}")
+                              div.host-name #{user.name.first_name} #{user.name.last_name}
+                              div.host-rating
+                                  i.icon-star
+                                  i.icon-star
+                                  i.icon-star
+                                  i.icon-star
+
+                    div.modal-footer
+                        a.btn.btn-primary.btn-large(href="#") Book It!
