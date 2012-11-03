@@ -1,0 +1,124 @@
+body.has-bg-photo {
+	position: relative;
+	min-width: 420px;
+	width: 100%;
+	height: 100%;
+	background: url('../img/cooking-woman.jpg')no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	/*filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.myBackground.jpg', sizingMethod='scale');
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')";*/
+}
+
+.site-header {
+  background: #A02654;
+  height: 68px;
+}
+
+.kitchenly-branding {
+  margin: 0px;
+  padding: 0px;
+}
+
+.kitchenly-branding a {
+  display: block;
+  margin: 0px;
+  color: #fff;
+  font-size: 18px;
+  background: transparent url('../img/kitchenly-logo.png') no-repeat 0px 8px;
+  text-indent: 62px;
+  height: 68px;
+  line-height: 68px;
+  font-family: "mic-32-new-web", sans-serif;
+}
+
+h1.tag-line {
+  color: #fff;
+}
+
+h2.description {
+  color: #fff;
+}
+
+.result-box {
+  background: #1F1F20;
+  margin-bottom: 28px;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+img.result-main-img{
+  width: 100%;
+  border-bottom: 1px solid #676767;
+}
+
+.host-user-img {
+  border-radius: 3px;  
+}
+
+h4.result-title {
+  margin: 0px;
+  color: #fff;
+  padding: 10px;
+  padding-bottom: 3px;
+  font-weight: normal;
+}
+
+.venue {
+  padding-left: 10px;
+}
+
+.result-meta {
+  padding: 10px;
+  border-top: 1px solid #676767;
+  margin-top: 10px;
+}
+
+.host-name {
+  font-size: 14px;
+  position:  relative;
+}
+
+.host-user-img {
+  width: 36px;
+  height: 36px;
+  border: 1px solid #676767;
+  margin-right: 7px;
+}
+
+#navbar-main {
+  margin-top: 24px;  
+}
+
+#navbar-main .navbar-inner {
+  padding-right: 0px;
+}
+
+.navbar-form {
+  margin-left: -15px;
+}
+
+.navbar-form div {
+  margin-right: 3px;
+}
+
+#navbar-main input {
+  height: 34px;
+  font-size: 18px;
+  top: -1px;
+}
+
+#navbar-main .add-on {
+  height: 34px;
+  font-size: 24px;
+  top: -1px;
+  position: relative;
+}
+
+#guest-number-picker .btn{
+  width: 160px;
+  text-align: left;
+  
+}

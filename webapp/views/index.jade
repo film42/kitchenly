@@ -1,19 +1,47 @@
-h1= title
-p Deving #{title}
-div.search-container
-    div
-        input(type="input", placeholder="When")#date-time
-    div
-        input(type="input", placeholder="Location")#location
-    div
-        select
-            option 1 Guest
-            option 2 Guests
-            option 3 Guests
-            option 4 Guests
-            option 5 Guests
-            option 6 Guests
-            option 7 Guests
-            option 8 Guests
-    div
-        button(type="submit") Search
+//h1= title
+//p Deving #{title}
+
+header.site-header 
+  div.container
+    h1.kitchenly-branding 
+     a(href='/') kitchenly
+
+div.page-contain.container
+  h1.tag-line Easily host dinners in your own kitchen.
+  h2.description The best way to turn your kitchen into a restaurant and also find great dinners around town.
+
+  div#navbar-main.navbar.navbar-inverse    
+    div.navbar-inner
+      form(class="navbar-form pull-left")
+        div#city-picker.input-append.pull-left
+            input(type="input", placeholder="What city do you want to eat in?")#date-time.span4
+            span.add-on
+              i.icon-map-marker
+        div#date-picker.input-append.pull-left
+            input(type="input", placeholder="When do you want to eat?")#location.span4
+            span.add-on
+              i.icon-calendar
+        div#guest-number-picker.btn-group.pull-left
+            button.btn.dropdown-toggle.btn-large(data-toggle="dropdown") 1 Guest
+                i.icon-user.pull-right
+            ul.dropdown-menu
+                li
+                  a(href="#") 1 Guest
+                li
+                  a(href="#") 2 Guests
+                li
+                  a(href="#") 3 Guests
+                li
+                  a(href="#") 4 Guests
+                li
+                  a(href="#") 5 Guests
+                li
+                  a(href="#") 6 Guests
+                li
+                  a(href="#") 7 Guests
+                li
+                  a(href="#") 8 Guests
+                  
+        button.btn.btn-primary.btn-large.pull-left(type="submit") Search for Dinner
+    
+    

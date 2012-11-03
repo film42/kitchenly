@@ -1,0 +1,95 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Kitchen.ly</title>
+  
+  <!-- Bootstrap -->
+  <link rel="stylesheet" type="text/css" href="bootstrap/stylesheets/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="bootstrap/stylesheets/responsive.css">
+  <link rel="stylesheet" type="text/css" href="stylesheets/kitchenly.css">
+  
+  <!--[if IE 6]><script src="scripts/vendor/belated.js"></script><![endif]-->
+  <!-- modernizr -->
+  <script src="scripts/vendor/modernizr-2.5.3.min.js"></script>
+ 
+  <!-- typekit -->
+  <script type="text/javascript" src="//use.typekit.net/jnr8raz.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
+</head>
+<body class="page-app has-bg-photo">
+  <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
+       chromium.org/developers/how-tos/chrome-frame-getting-started -->
+  <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+ 
+  <header role="page-header" class="site-header">
+    <div class="container">
+      <h1 class="kitchenly-branding"><a href="home.html">kitchen.ly</a></h1>  
+    </div>
+  </header>
+  
+  <div class="page-contain container">
+  
+  <h1 class="tag-line">Easily host dinners in your own kitchen.</h1>
+  <h3 class="description">The best way to turn your kitchen into a restaurant and also find great dinners around town.</h3>
+  
+    <div class="navbar navbar-inverse" id="navbar-main">
+      <div class="navbar-inner">
+        <form class="navbar-form pull-left">
+          <div class="input-append pull-left" id="city-picker">
+            <input class="span4" id="appendedInput" type="text" placeholder="What city do you want to eat in?">
+            <span class="add-on"><i class="icon-map-marker"></i></span>
+          </div>    
+          <div class="input-append pull-left" id="date-picker">
+            <input class="span4" id="appendedInput" type="text" placeholder="When do you want to eat?">
+            <span class="add-on"><i class="icon-calendar"></i></span>
+          </div>
+          <div class="btn-group pull-left" id="guest-number-picker">
+            <button class="btn dropdown-toggle btn-large" data-toggle="dropdown">2 guests <i class="icon-user pull-right"></i></button>
+            <ul class="dropdown-menu">
+              <li><a href="#">1 guests</a></li>
+              <li><a href="#">2 guests</a></li>
+              <li><a href="#">3 guests</a></li>
+              <li><a href="#">4 guests</a></li>
+              <li><a href="#">5 guests</a></li>
+              <li><a href="#">6 guests</a></li>
+              <li><a href="#">7 guests</a></li>
+              <li><a href="#">8 guests</a></li>
+              <li><a href="#">9 guests</a></li>
+              <li><a href="#">10 guests</a></li>
+            </ul>
+          </div>
+          <button type="submit" class="btn btn-primary btn-large pull-left">Search for Dinner</button>
+        </form>
+      </div>
+    </div><!-- end navbar -->
+  </div><!--end .page-contain -->
+  
+
+  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="scripts/vendor/jquery/jquery-1.7.1.min.js"><\/script>')</script>
+<!--  <script src="{{ STATIC_URL }}scripts/vendor/jquery/jquery.ui.core.js"></script>
+  <script src="{{ STATIC_URL }}scripts/vendor/jquery/jquery.ui.selectable.js"></script>-->
+  <script src="scripts/vendor/ss-social.js"></script>
+  <script src="scripts/vendor/ss-standard.js"></script>
+  
+  <script src="bootstrap/scripts/bootstrap-transition.js"></script>  
+  <script src="bootstrap/scripts/bootstrap-modal.js"></script>
+  <script src="bootstrap/scripts/bootstrap-dropdown.js"></script>
+  <script src="bootstrap/scripts/bootstrap-button.js"></script>
+  <script src="bootstrap/scripts/bootstrap-tooltip.js"></script>
+  <script src="bootstrap/scripts/bootstrap-popover.js"></script>
+  
+
+  <!-- scripts concatenated and minified via build script -->
+  <script src="scripts/plugins.js"></script>
+  
+    
+</body>
