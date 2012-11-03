@@ -144,18 +144,18 @@ textarea {
 }
 body {
   margin: 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 20px;
   color: #333333;
   background-color: #ffffff;
 }
 a {
-  color: #0088cc;
+  color: #44a1e1;
   text-decoration: none;
 }
 a:hover {
-  color: #005580;
+  color: #1e7bbb;
   text-decoration: underline;
 }
 .img-rounded {
@@ -795,7 +795,7 @@ input,
 button,
 select,
 textarea {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 label {
   display: block;
@@ -2325,28 +2325,28 @@ table th[class*="span"],
 .dropdown-submenu:hover > a {
   text-decoration: none;
   color: #ffffff;
-  background-color: #0081c2;
-  background-image: -moz-linear-gradient(top, #0088cc, #0077b3);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0077b3));
-  background-image: -webkit-linear-gradient(top, #0088cc, #0077b3);
-  background-image: -o-linear-gradient(top, #0088cc, #0077b3);
-  background-image: linear-gradient(to bottom, #0088cc, #0077b3);
+  background-color: #3b9de0;
+  background-image: -moz-linear-gradient(top, #44a1e1, #2e96dd);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#44a1e1), to(#2e96dd));
+  background-image: -webkit-linear-gradient(top, #44a1e1, #2e96dd);
+  background-image: -o-linear-gradient(top, #44a1e1, #2e96dd);
+  background-image: linear-gradient(to bottom, #44a1e1, #2e96dd);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0088cc', endColorstr='#ff0077b3', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff44a1e1', endColorstr='#ff2e96dd', GradientType=0);
 }
 .dropdown-menu .active > a,
 .dropdown-menu .active > a:hover {
   color: #333333;
   text-decoration: none;
   outline: 0;
-  background-color: #0081c2;
-  background-image: -moz-linear-gradient(top, #0088cc, #0077b3);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0077b3));
-  background-image: -webkit-linear-gradient(top, #0088cc, #0077b3);
-  background-image: -o-linear-gradient(top, #0088cc, #0077b3);
-  background-image: linear-gradient(to bottom, #0088cc, #0077b3);
+  background-color: #3b9de0;
+  background-image: -moz-linear-gradient(top, #44a1e1, #2e96dd);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#44a1e1), to(#2e96dd));
+  background-image: -webkit-linear-gradient(top, #44a1e1, #2e96dd);
+  background-image: -o-linear-gradient(top, #44a1e1, #2e96dd);
+  background-image: linear-gradient(to bottom, #44a1e1, #2e96dd);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0088cc', endColorstr='#ff0077b3', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff44a1e1', endColorstr='#ff2e96dd', GradientType=0);
 }
 .dropdown-menu .disabled > a,
 .dropdown-menu .disabled > a:hover {
@@ -2892,13 +2892,13 @@ input[type="submit"].btn.btn-mini {
 .btn-link {
   border-color: transparent;
   cursor: pointer;
-  color: #0088cc;
+  color: #44a1e1;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
 }
 .btn-link:hover {
-  color: #005580;
+  color: #1e7bbb;
   text-decoration: underline;
   background-color: transparent;
 }
@@ -3212,7 +3212,7 @@ input[type="submit"].btn.btn-mini {
 .nav-list > .active > a:hover {
   color: #ffffff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
-  background-color: #0088cc;
+  background-color: #44a1e1;
 }
 .nav-list [class^="icon-"],
 .nav-list [class*=" icon-"] {
@@ -3292,7 +3292,7 @@ input[type="submit"].btn.btn-mini {
 .nav-pills > .active > a,
 .nav-pills > .active > a:hover {
   color: #ffffff;
-  background-color: #0088cc;
+  background-color: #44a1e1;
 }
 .nav-stacked > li {
   float: none;
@@ -3346,13 +3346,13 @@ input[type="submit"].btn.btn-mini {
   border-radius: 6px;
 }
 .nav .dropdown-toggle .caret {
-  border-top-color: #0088cc;
-  border-bottom-color: #0088cc;
+  border-top-color: #44a1e1;
+  border-bottom-color: #44a1e1;
   margin-top: 6px;
 }
 .nav .dropdown-toggle:hover .caret {
-  border-top-color: #005580;
-  border-bottom-color: #005580;
+  border-top-color: #1e7bbb;
+  border-bottom-color: #1e7bbb;
 }
 /* move down carets for tabs */
 .nav-tabs .dropdown-toggle .caret {
@@ -3621,7 +3621,7 @@ input[type="submit"].btn.btn-mini {
 .navbar-search .search-query {
   margin-bottom: 0;
   padding: 4px 14px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
   font-weight: normal;
   line-height: 1;
@@ -4507,7 +4507,7 @@ input[type="submit"].btn.btn-mini {
   transition: all 0.2s ease-in-out;
 }
 a.thumbnail:hover {
-  border-color: #0088cc;
+  border-color: #44a1e1;
   -webkit-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
   -moz-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
   box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
@@ -4972,8 +4972,8 @@ a.badge:hover {
 @charset "UTF-8";
 @font-face {
   font-family: "SSStandard";
-  src: url('../../fonts/ss-standard.eot');
-  src: url('../../fonts/ss-standard.eot?#iefix') format('embedded-opentype'), url('../../fonts/ss-standard.woff') format('woff'), url('../../fonts/ss-standard.ttf') format('truetype'), url('../../fonts/ss-standard.svg#SSStandard') format('svg');
+  src: url('/fonts/ss-standard.eot');
+  src: url('/fonts/ss-standard.eot?#iefix') format('embedded-opentype'), url('/fonts/ss-standard.woff') format('woff'), url('/fonts/ss-standard.ttf') format('truetype'), url('/fonts/ss-standard.svg#SSStandard') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -5653,15 +5653,15 @@ a.badge:hover {
 @charset "UTF-8";
 @font-face {
   font-family: "SSSocial";
-  src: url('../../fonts/ss-social-circle.eot');
-  src: url('../../fonts/ss-social-circle.eot?#iefix') format('embedded-opentype'), url('../../fonts/ss-social-circle.woff') format('woff'), url('../../fonts/ss-social-circle.ttf') format('truetype'), url('../../fonts/ss-social-circle.svg#SSSocialCircle') format('svg');
+  src: url('/fonts/ss-social-circle.eot');
+  src: url('/fonts/ss-social-circle.eot?#iefix') format('embedded-opentype'), url('/fonts/ss-social-circle.woff') format('woff'), url('/fonts/ss-social-circle.ttf') format('truetype'), url('/fonts/ss-social-circle.svg#SSSocialCircle') format('svg');
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
   font-family: "SSSocial";
-  src: url('../../fonts/ss-social-regular.eot');
-  src: url('../../fonts/ss-social-regular.eot?#iefix') format('embedded-opentype'), url('../../fonts/ss-social-regular.woff') format('woff'), url('../../fonts/ss-social-regular.ttf') format('truetype'), url('../../fonts/ss-social-regular.svg#SSSocialRegular') format('svg');
+  src: url('/fonts/ss-social-regular.eot');
+  src: url('/fonts/ss-social-regular.eot?#iefix') format('embedded-opentype'), url('/fonts/ss-social-regular.woff') format('woff'), url('/fonts/ss-social-regular.ttf') format('truetype'), url('/fonts/ss-social-regular.svg#SSSocialRegular') format('svg');
   font-weight: normal;
   font-style: normal;
 }

@@ -63,7 +63,7 @@ h1.tag-line {
 
 h2.description {
   color: #fff;
-  font-size: 24px;
+  font-size: 22px;
   line-height: 36px;
   margin-top: 20px;
   font-weight: normal;
@@ -154,12 +154,7 @@ h4.result-title {
 
 #navbar-main .navbar-inner, #navbar-secondary .navbar-inner {
   padding-right: 0px;
-  padding-left: 0px;
-  
-}
-
-#navbar-secondary .navbar-inner {
-  
+  padding-left: 0px; 
 }
 
 #navbar-main .navbar-form {
@@ -174,6 +169,12 @@ h4.result-title {
   width: 160px;
   text-align: left;
 }
+
+/*.logo-big {
+  height: 280px;
+  width: 280px;
+  background: url('../img/logo-big.png') no-repeat 0 0;
+}*/
 
 #navbar-secondary .navbar-form {
  margin-left: 8px;
@@ -347,6 +348,17 @@ a.day.today {
   font-size: 14px;
   background: #952B47;
   color: #fff;
+}
+
+.result-main-img-contain {
+  height: 270px;
+  width: 270px;
+  overflow: hidden;
+}
+
+.result-main-img {
+  min-height: 270px;
+  min-width: 270px;
 }
 
 a:hover.day {

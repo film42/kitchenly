@@ -57,7 +57,8 @@ div.page-contain.container
             each user, index in users
                 div.span3.result-box
                     - if (typeof(user.venues) !== 'undefined' && user.venues.length > 0)
-                        img.result-main-img(src="#{user.venues[0].photo_url}")
+                        div.result-main-img-contain
+                          img.result-main-img(src="#{user.venues[0].photo_url}")
                         h4.result-title
                             a(href="#result-modal-#{index}", data-toggle="modal") #{user.venues[0].name}
                                 span.price-range.pull-right //#{user.venues[0].price}
