@@ -85,7 +85,7 @@ app.get(app.lookupRoute('auth.register'), routes.register);
 app.get(app.lookupRoute('search'), routes.search);
 
 var stripeApiKey = "sk_test_CM4WZXO8TTKVsY27xUNNmswz";
-var stripeApiKeyTesting = "sk_test_CM4WZXO8TTKVsY27xUNNmswz"
+var stripeApiKeyTesting = "sk_test_CM4WZXO8TTKVsY27xUNNmswz";
 var stripe = require('stripe')(stripeApiKey);
 
 app.post("/payment", function(req, res) {
