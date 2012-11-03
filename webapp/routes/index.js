@@ -11,7 +11,7 @@ exports.payment = function(req, res) {
 
 // Get the search results page.
 exports.search = function(req, res) {
-    couchdb.getAllUsers(true, function(users) {
+    couchdb.performSearch(req.query, function(users) {
         console.log(users);
         var viewData = { title: 'Search results' };
         viewData.users = users;
@@ -25,7 +25,14 @@ exports.search = function(req, res) {
 ***********************************/
 exports.user_index = function(req, res) {
 	couchdb.getUserByUsername(req.params.username.toString(), true, function(user) {
-		res.render('user_index', user);
+    if(!user) res.send('404');
+    else {
+        var data = {
+          title: user.username + " - Kitchenly",
+          user: user
+        };
+		res.render('user_index', data);
+    }     
 	});
 };
 exports.user_reservations = function(req, res) {
