@@ -283,3 +283,27 @@ a:hover.social-link {
 #calendar-picker th {
   padding-top: 2px;
 }
+
+.typeahead.dropdown-menu {
+  width: 365px;
+}
+
+.typeahead.dropdown-menu li a {
+  font-size: 18px;
+  line-height: 32px;
+  height: 32px;
+
+}
+
+.typeahead.dropdown-menu li a:hover {
+  color: #fff;
+  text-decoration: none;
+  background: #44A1E1;
+
+}
+
+.typeahead.dropdown-menu li.active a {
+  color: #fff;
+  text-decoration: none;
+  background: #44A1E1;
+}
