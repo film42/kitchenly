@@ -3,8 +3,16 @@
 
 header.site-header 
   div.container
-    h1.kitchenly-branding.tk-mic-32-new-web 
-     a(href='/') kitchen.ly
+    h1.kitchenly-branding.tk-mic-32-new-web.pull-left 
+      a(href='/') kitchen.ly
+    div.pull-right
+      ul#user-nav.unstyled.nav.nav-pills
+        li.pull-left 
+          a.sign-up-link(href='/') Sign Up
+        li.pull-left
+          a.sign-in-link(href='/') Login 
+   
+       
 
 div.page-contain.container
   div.homepage-feature.span5
@@ -15,7 +23,7 @@ div.page-contain.container
     div.navbar-inner
       form(class="navbar-form pull-left")
         div#city-picker.input-append.pull-left
-            input(type="input", placeholder="What city do you want to eat in?")#date-time.span4
+            input(type="input", data-provide="typeahead", placeholder="What city do you want to eat in?")#date-time.span4
             span.add-on
               span.ss-icon.ss-standard location
         div#date-picker.input-append.pull-left
@@ -58,5 +66,6 @@ block scripts
     <script src="bootstrap/js/bootstrap-button.js"></script>
     <script src="bootstrap/js/bootstrap-tooltip.js"></script>
     <script src="bootstrap/js/bootstrap-popover.js"></script>
+    <script src="bootstrap/js/bootstrap-typeahead.js"></script>
     
     

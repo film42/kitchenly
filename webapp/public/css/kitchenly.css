@@ -35,6 +35,10 @@ body.has-bg-photo {
   font-family: "mic-32-new-web", sans-serif;
 }
 
+.kitchenly-branding a:hover {
+  text-decoration: none;
+}
+
 h1.tag-line {
   color: #fff;
   font-size: 48px;
@@ -55,6 +59,18 @@ h2.description {
   margin-bottom: 28px;
   color: #fff;
   box-sizing: border-box;
+}
+
+#user-nav {
+  margin-top: 15px;
+}
+
+#user-nav li a {
+  color: #fff;
+}
+
+#user-nav li a:hover {
+  color: #333;
 }
 
 img.result-main-img{
