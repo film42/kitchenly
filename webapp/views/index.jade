@@ -7,8 +7,9 @@ header.site-header
      a(href='/') kitchen.ly
 
 div.page-contain.container
-  h1.tag-line.tk-proxima-nova Easily host dinners in your own kitchen.
-  h2.description.tk-pt-serif-caption The best way to turn your kitchen into a restaurant and also find great dinners around town.
+  div.homepage-feature.span5
+    h1.tag-line.tk-proxima-nova Easily host dinners in your own kitchen.
+    h2.description.tk-pt-serif-caption The best way to turn your kitchen into a restaurant and also find great dinners around town.
 
   div#navbar-main.navbar.navbar-inverse    
     div.navbar-inner
@@ -16,14 +17,14 @@ div.page-contain.container
         div#city-picker.input-append.pull-left
             input(type="input", placeholder="What city do you want to eat in?")#date-time.span4
             span.add-on
-              i.icon-map-marker
+              span.ss-icon.ss-standard location
         div#date-picker.input-append.pull-left
             input(type="input", placeholder="When do you want to eat?")#location.span4
             span.add-on
-              i.icon-calendar
+              span.ss-icon.ss-standard date
         div#guest-number-picker.btn-group.pull-left
             button.btn.dropdown-toggle.btn-large(data-toggle="dropdown") 1 Guest
-                i.icon-user.pull-right
+                span.ss-icon.ss-standard.pull-right users
             ul.dropdown-menu
                 li
                   a(href="#") 1 Guest

@@ -38,11 +38,15 @@ body.has-bg-photo {
 h1.tag-line {
   color: #fff;
   font-size: 48px;
+  line-height: 52px;
+  
 }
 
 h2.description {
   color: #fff;
   font-size: 24px;
+  line-height: 36px;
+  margin-top: 20px;
   font-weight: normal;
 }
 
@@ -94,6 +98,7 @@ h4.result-title {
 
 #navbar-main {
   margin-top: 24px;  
+  clear: both;
 }
 
 #navbar-main .navbar-inner {
@@ -101,24 +106,39 @@ h4.result-title {
 }
 
 .navbar-form {
-  margin-left: -15px;
+  margin-left: -16px;
 }
 
 .navbar-form div {
-  margin-right: 3px;
+  margin-right: 4px;
 }
 
 #navbar-main input {
-  height: 34px;
+  height: 42px;
+  line-height: 42px;
   font-size: 18px;
   top: -1px;
+  border: none;
+  padding-left: 10px;
 }
 
 #navbar-main .add-on {
-  height: 34px;
-  font-size: 24px;
+  height: 33px;
+  width: 25px;
+  font-size: 18px;
+  line-height: 35px;
   top: -1px;
+  padding-top: 5px;
   position: relative;
+  color: #333;
+}
+
+.homepage-feature {
+  background: #2B2B29;
+  margin-left: 0px;
+  padding: 20px;
+  margin-bottom: 20px;
+  
 }
 
 #guest-number-picker .btn{
