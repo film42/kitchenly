@@ -4,20 +4,20 @@ header.site-header(role="page-header")
             a(href="/") kitchen.ly
 
 div.page-contain.container
-    div.navbar.navbar-inverse
+    div#navbar-secondary.navbar.navbar-inverse
         div.navbar-inner
             form.navbar-form.pull-left
-                div.input-append.pull-left
-                    input#appendedInput.span3(type="text", placeholder="What city do you want to eat in?")
+                div#city-picker.input-append.pull-left
+                    input#appendedInput.span4(type="text", placeholder="What city do you want to eat in?")
                     span.add-on
                         i.icon-map-marker
 
-                div.input-append.pull-left
-                    input#appendedInput.span3(type="text", placeholder="When do you want to eat?")
+                div#date-picker.input-append.pull-left
+                    input#appendedInput.span4(type="text", placeholder="When do you want to eat?")
                     span.add-on
                         i.icon-calendar
 
-                div.btn-group.pull-left
+                div#guest-number-picker.btn-group.pull-left
                     button.btn.dropdown-toggle(data-toggle="dropdown") 2 guests
                         i.icon-user
                     ul.dropdown-menu
@@ -38,7 +38,7 @@ div.page-contain.container
                         li
                             a(href="#") 8 Guests
 
-                    button.btn.btn-primary.pull-left(type="submit") Search for Dinner
+                button.btn.btn-primary.pull-left(type="submit") Search for Dinner
 
     div.search-results-contain
     div.map
