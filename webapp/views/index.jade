@@ -10,8 +10,15 @@ header.site-header
       ul#user-nav.unstyled.nav.nav-pills
         li.pull-left 
           a.sign-up-link(href='/') Sign Up
-        li.pull-left
-          a.sign-in-link(href='/') Login 
+        li.dropdown.pull-left
+          a.dropdown-toggle(href='#', data-toggle='dropdown') Login
+          .dropdown-menu(style='padding: 15px; margin-left: -203px; margin-top:-6px; padding-bottom: 0px;')
+            form(method='post', action='login', accept-charset='UTF-8')
+              input#username(style='margin-bottom: 15px;', type='text', placeholder='Username', name='username')
+              input#password(style='margin-bottom: 15px;', type='password', placeholder='Password', name='password')
+              input#remember-me(style='float: left; margin-right: 10px;', type='checkbox', name='remember-me', value='1')
+              label.string.optional(for='user_remember_me')  Remember me
+              input#sign-in.btn.btn-primary.btn-block(type='submit', value='Sign In')
 
 div.page-contain.container
   div.homepage-feature.span5
@@ -52,105 +59,4 @@ div.page-contain.container
                 li
                   a(href="#") 8 Guests
                   
-        button.btn.btn-primary.btn-large.pull-left(type="submit") Search for Dinner  
-  
-  div#calendar-picker-contain
-    div#calendar-picker
-        table.table-bordered.table-striped.table-collapsed
-            thead
-              tr
-                th.buttons(colspan="7")
-                  div.btn-group
-                    a.btn 
-                      i.icon-chevron-left
-                    a.btn.center-btn November 2012
-                    a.btn
-                      i.icon-chevron-right
-              tr
-                th.day-of-week Sun
-                th.day-of-week Mon
-                th.day-of-week Tue
-                th.day-of-week Wed
-                th.day-of-week Thu
-                th.day-of-week Fri
-                th.day-of-week Sat
-          
-            tbody
-              tr
-                td.muted 
-                  a.day(href='#') 29
-                td.muted
-                  a.day(href='#') 30
-                td.muted
-                  a.day(href='#') 31
-                td
-                  a.day(href='#') 1
-                td 
-                  a.day(href='#') 2
-                td 
-                  a.day(href='#') 3
-                td 
-                  a.day(href='#') 4
-              
-              tr
-                td 
-                  a.day(href='#') 5
-                td 
-                  a.day(href='#') 6
-                td 
-                  a.day(href='#') 7
-                td 
-                  a.day(href='#') 8
-                td 
-                  a.day(href='#') 9
-                td 
-                  a.day(href='#') 10
-                td 
-                  a.day(href='#') 11
-              
-              tr
-                td 
-                  a.day(href='#') 12
-                td 
-                  a.day(href='#') 13
-                td 
-                  a.day(href='#') 14
-                td 
-                  a.day(href='#') 15
-                td 
-                  a.day(href='#') 16
-                td 
-                  a.day(href='#') 17
-                td 
-                  a.day(href='#') 18
-              
-              tr
-                td 
-                  a.day(href='#') 19
-                td 
-                  a.day(href='#') 20
-                td 
-                  a.day(href='#') 21
-                td 
-                  a.day(href='#') 22
-                td 
-                  a.day(href='#') 23
-                td 
-                  a.day(href='#') 24
-                td 
-                  a.day(href='#') 25
-              tr
-                td 
-                  a.day(href='#') 26
-                td 
-                  a.day(href='#') 27
-                td 
-                  a.day(href='#') 28
-                td 
-                  a.day(href='#') 29
-                td.muted 
-                  a.day(href='#') 1
-                td.muted 
-                  a.day(href='#') 2  
-                td.muted 
-                  a.day(href='#') 3
+        button#search-button.btn.btn-primary.btn-large.pull-left(type="submit") Search for Dinner  
