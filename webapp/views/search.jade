@@ -1,10 +1,10 @@
-header.site-header 
+header.site-header
   div.container
-    h1.kitchenly-branding.tk-mic-32-new-web.pull-left 
+    h1.kitchenly-branding.tk-mic-32-new-web.pull-left
       a(href='/') kitchen.ly
     div.pull-right
       ul#user-nav.unstyled.nav.nav-pills
-        li.pull-left 
+        li.pull-left
           a.sign-up-link(href='/') Sign Up
         li.dropdown.pull-left
           a.dropdown-toggle(href='#', data-toggle='dropdown') Login
@@ -24,14 +24,14 @@ div.page-contain.container
                     input#location.typeahead.span4(type="text", placeholder="What city do you want to eat in?")
                     span.add-on
                         i.icon-map-marker
-                        
+
                 div#date-picker.input-append.pull-left
                     input#date-time.span4(type="text", rel="popover", data-placement="bottom", placeholder="When do you want to eat?")
                     span.add-on
                         i.icon-calendar
 
                 div#guest-number-picker.btn-group.pull-left
-                    button.btn.dropdown-toggle.span2(data-toggle="dropdown") 
+                    button.btn.dropdown-toggle.span2(data-toggle="dropdown")
                         span.num 2 guests
                         i.icon-user.pull-right
                     ul.dropdown-menu
@@ -63,27 +63,28 @@ div.page-contain.container
 
             each user, index in users
                 div.span3.result-box
-                    - if (typeof(user.venues) !== 'undefined' && user.venues.length > 0)
+                    - if (typeof(user.venues) !== 'undefined' && user.venues)
                         div.result-main-img-contain
                           a(href="#result-modal-#{index}", data-toggle="modal")
                             img.result-main-img(src="#{user.venues[0].photo_url}")
                         h4.result-title
                             a(href="#result-modal-#{index}", data-toggle="modal") #{user.venues[0].name}
-                                span.price-range.pull-right //#{user.venues[0].price}
+                                span.price-range.pull-right #{user.venues[0].price}
                     div.venue
                         i.icon-map-marker.icon-white
-                        - if (typeof(user.venues) !== 'undefined' && user.venues.length > 0 && user.venues[0].location)
+                        - if (typeof(user.venues) !== 'undefined' && user.venues && user.venues[0].location)
                             span #{user.venues[0].location.city}, #{user.venues[0].location.state}
 
                     div.result-meta
                         div.host-bio
                             img.host-user-img.pull-left(src="#{user.photo_url}")
-                            div.host-name #{user.name.first_name} #{user.name.last_name}
-                            div.host-rating
-                                i.icon-star.icon-white
-                                i.icon-star.icon-white
-                                i.icon-star.icon-white
-                                i.icon-star.icon-white
+                            - if (user.name)
+                                div.host-name #{user.name.first_name} #{user.name.last_name}
+                                div.host-rating
+                                    i.icon-star.icon-white
+                                    i.icon-star.icon-white
+                                    i.icon-star.icon-white
+                                    i.icon-star.icon-white
 
                 div.modal.hide(id="result-modal-#{index}")
                     div.modal-header
@@ -91,7 +92,8 @@ div.page-contain.container
                         h3 #{user.venues[0].name}
                         div.location
                           i.icon-map-marker
-                          span.city-name #{user.venues[0].location.city}, #{user.venues[0].location.state}
+                          - if (user.venues[0].location)
+                            span.city-name #{user.venues[0].location.city}, #{user.venues[0].location.state}
 
                     div.modal-body
                         img.result-main-img(src="#{user.venues[0].photo_url}")
@@ -100,11 +102,27 @@ div.page-contain.container
                     div.modal-footer
                         div.host-bio.span3.pull-left
                           img.host-user-img-big.pull-left(src="#{user.photo_url}")
+                          - if (user.name)
                           div.host-name.pull-left #{user.name.first_name} #{user.name.last_name}
+                          span test
                           div.host-rating.pull-left
                               i.icon-star
                               i.icon-star
                               i.icon-star
                               i.icon-star
                         div.pull-right
+                            span Description:
+                            #{user.name.description}
+                            span Guest Limits:
+                            - if (user.name.guest_limit)
+                                #{user.name.guest_limit.minimum}
+                                #{user.name.guest_limit.maximum}
+                            span Specialties:
+                            each specialty in user.name.specialties
+                                #{specialty}
+                            span Reviews:
+                            - if (user.name.reviews)
+                                each review in user.name.reviews
+                                    #{reviews.comment}
+                                    #{reviews.rating}
                             a.btn.btn-primary.btn-large(href="#") Book It!

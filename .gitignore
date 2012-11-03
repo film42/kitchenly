@@ -10,3 +10,23 @@ webapp/.idea/workspace.xml
 webapp/.idea/workspace.xml
 
 webapp/node_modules/jquery/.npmignore
+
+webapp/node_modules/stripe/Changes
+
+webapp/node_modules/stripe/LICENSE
+
+webapp/node_modules/stripe/test/tokens.js
+
+webapp/node_modules/stripe/test/invoices.js
+
+webapp/node_modules/stripe/README.md
+
+webapp/node_modules/stripe/lib/main.js
+
+webapp/node_modules/stripe/package.json
+
+webapp/node_modules/stripe/test/charges.js
+
+webapp/node_modules/stripe/test/customers.js
+
+webapp/node_modules/stripe/test/plans.js
