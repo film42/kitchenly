@@ -30,7 +30,6 @@ body.has-bg-photo {
 .site-header {
   background: #A02654;
   height: 68px;
- 
 }
 
 .kitchenly-branding {
@@ -188,11 +187,17 @@ h4.result-title {
 }
 
 a.social-link {
-text-decoration: none;
-font-size: 30px;
-color: #fff;  
+  text-decoration: none;
+  font-size: 42px;
+  color: #fff;  
+  margin: 6px;
 }
 
 a:hover.social-link {
   color: #44A1E1;
+}
+
+.rule {
+  margin-top: 32px;
+  border-top: #fff;
 }
