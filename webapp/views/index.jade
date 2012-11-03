@@ -26,12 +26,13 @@ div.page-contain.container
             span.add-on
               span.ss-icon.ss-standard location
         div#date-picker.input-append.pull-left
-            input(type="input", placeholder="When do you want to eat?")#date-time.span4
+            input(type="input", rel="popover", data-placement="bottom", placeholder="When do you want to eat?")#date-time.span4
             span.add-on
               span.ss-icon.ss-standard date
                       
         div#guest-number-picker.btn-group.pull-left
-            button.btn.dropdown-toggle.btn-large(data-toggle="dropdown") 1 Guest
+            button.btn.dropdown-toggle.btn-large(data-toggle="dropdown") 
+                span.num 1 Guest
                 span.ss-icon.ss-standard.pull-right users
             ul.dropdown-menu
                 li
@@ -53,67 +54,103 @@ div.page-contain.container
                   
         button.btn.btn-primary.btn-large.pull-left(type="submit") Search for Dinner  
   
-  div#calendar-picker.hide
-    table.table-bordered.table-striped.table-collapsed
-        thead
-          tr
-            th.buttons(colspan="7")
-              div.btn-group
-                a.btn 
-                  i.icon-chevron-left
-                a.btn.center-btn November 2012
-                a.btn
-                  i.icon-chevron-right
-          tr
-            th Sun
-            th Mon
-            th Tue
-            th Wed
-            th Thu
-            th Fri
-            th Sat
-      
-        tbody
-          tr
-            td.muted 29
-            td.muted 30
-            td.muted 31
-            td 1
-            td 2
-            td 3
-            td 4
+  div#calendar-picker-contain
+    div#calendar-picker
+        table.table-bordered.table-striped.table-collapsed
+            thead
+              tr
+                th.buttons(colspan="7")
+                  div.btn-group
+                    a.btn 
+                      i.icon-chevron-left
+                    a.btn.center-btn November 2012
+                    a.btn
+                      i.icon-chevron-right
+              tr
+                th.day-of-week Sun
+                th.day-of-week Mon
+                th.day-of-week Tue
+                th.day-of-week Wed
+                th.day-of-week Thu
+                th.day-of-week Fri
+                th.day-of-week Sat
           
-          tr
-            td 5
-            td 6
-            td 7
-            td 8
-            td 9
-            td 10
-            td 11
-          
-          tr
-            td 12
-            td 13
-            td 14
-            td 15
-            td 16
-            td 17
-            td 18
-          
-          tr
-            td 19
-            td 20
-            td 21
-            td 22
-            td 23
-            td 24
-            td 25
-          tr
-            td 26
-            td 27
-            td 28
-            td 29
-            td.muted 1
-            td.muted 2  
-            td.muted 3
+            tbody
+              tr
+                td.muted 
+                  a.day(href='#') 29
+                td.muted
+                  a.day(href='#') 30
+                td.muted
+                  a.day(href='#') 31
+                td
+                  a.day(href='#') 1
+                td 
+                  a.day(href='#') 2
+                td 
+                  a.day(href='#') 3
+                td 
+                  a.day(href='#') 4
+              
+              tr
+                td 
+                  a.day(href='#') 5
+                td 
+                  a.day(href='#') 6
+                td 
+                  a.day(href='#') 7
+                td 
+                  a.day(href='#') 8
+                td 
+                  a.day(href='#') 9
+                td 
+                  a.day(href='#') 10
+                td 
+                  a.day(href='#') 11
+              
+              tr
+                td 
+                  a.day(href='#') 12
+                td 
+                  a.day(href='#') 13
+                td 
+                  a.day(href='#') 14
+                td 
+                  a.day(href='#') 15
+                td 
+                  a.day(href='#') 16
+                td 
+                  a.day(href='#') 17
+                td 
+                  a.day(href='#') 18
+              
+              tr
+                td 
+                  a.day(href='#') 19
+                td 
+                  a.day(href='#') 20
+                td 
+                  a.day(href='#') 21
+                td 
+                  a.day(href='#') 22
+                td 
+                  a.day(href='#') 23
+                td 
+                  a.day(href='#') 24
+                td 
+                  a.day(href='#') 25
+              tr
+                td 
+                  a.day(href='#') 26
+                td 
+                  a.day(href='#') 27
+                td 
+                  a.day(href='#') 28
+                td 
+                  a.day(href='#') 29
+                td.muted 
+                  a.day(href='#') 1
+                td.muted 
+                  a.day(href='#') 2  
+                td.muted 
+                  a.day(href='#') 3

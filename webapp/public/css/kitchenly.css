@@ -258,6 +258,8 @@ a:hover.social-link {
   box-sizing: border-box;
 }
 
+
+
 #calendar-picker th.buttons {
 
 }
@@ -306,4 +308,44 @@ a:hover.social-link {
   color: #fff;
   text-decoration: none;
   background: #44A1E1;
+}
+
+#calendar-picker th.day-of-week {
+  height: 24px;
+  line-height: 24px;
+  font-size: 12px;
+}
+
+#date-picker .popover {
+  width: 230px;
+  padding: 0px;
+}
+#date-picker .popover-title {
+  display: none;
+}
+
+#date-picker .popover .popover-inner, #date-picker .popover .popover-content {
+  padding: 0px;
+  margin: 0px;
+}
+
+#calendar-picker td.muted {
+  background: #ccc;
+}
+
+#calendar-picker td.muted a {
+  color: #928E88;
+}
+
+a.day {
+  display: block; 
+  font-size: 14px;
+}
+
+a:hover.day {
+  text-decoration: none;
+  display: block;
+  background: #44A1E1;
+  color: #fff;
+  
 }
