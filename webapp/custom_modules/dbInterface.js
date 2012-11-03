@@ -2,7 +2,8 @@
     Database Controller
 *****************************/
 
-var nano = require('nano')('https://ivowto.iriscouch.com:6984');
+//var nano = require('nano')('https://ivowto.iriscouch.com:6984');
+var nano = require('nano')('http://localhost:5984');
 var each = require('each');
 
 /*** couchdb settings ***/
