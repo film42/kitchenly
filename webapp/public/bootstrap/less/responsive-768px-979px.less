@@ -15,5 +15,21 @@
   #grid > .input(@gridColumnWidth768, @gridGutterWidth768);
 
   // No need to reset .thumbnails here since it's the same @gridGutterWidth
+  
+  @mainImgColWidth: (@gridColumnWidth768 * 3);
+  @mainImgGutWidth: (@gridGutterWidth768 * 2);
+  @mainImgContainWidth: (@mainImgColWidth + @mainImgGutWidth);
+  
+.result-main-img-contain {  
+  height: mainImgContainWidth;
+  width: mainImgContainWidth;
+  overflow: hidden;
+}
+
+.result-main-img {
+  max-height: @mainImgContainWidth;
+  min-height: @mainImgContainWidth;
+  min-width: @mainImgContainWidth;
+}
 
 }
