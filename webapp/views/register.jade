@@ -1,36 +1,50 @@
-form.form-horizontal(action='', method='POST')
-    fieldset
-        legend Register
-        
-        .control-group
-          //Username 
-          label.control-label(for='username') Username
-          .controls
-            input#username.input-xlarge(type='text', name='username', placeholder='')
-            p.help-block Username can contain any letters or numbers, without spaces
-        
-        .control-group
-          //E-mail 
-          label.control-label(for='email') E-mail
-          .controls
-            input#email.input-xlarge(type='text', name='email', placeholder='')
-            p.help-block Please provide your E-mail
-        
-        .control-group
-          //Password
-          label.control-label(for='password') Password
-          .controls
-            input#password.input-xlarge(type='password', name='password', placeholder='')
-            p.help-block Password should be at least 4 characters
-        
-        .control-group
-         //Password confirm
-          label.control-label(for='password_confirm') Confirm Password
-          .controls
-            input#password_confirm.input-xlarge(type='password', name='password_confirm', placeholder='')
-            p.help-block Please confirm password
+header.site-header 
+  div.container
+    h1.kitchenly-branding.tk-mic-32-new-web.pull-left 
+      a(href='/') kitchen.ly
+    div.pull-right
+      ul#user-nav.unstyled.nav.nav-pills
+        li.pull-left 
+          a.sign-up-link(href='/') Sign Up
+        li.dropdown.pull-left
+          a.dropdown-toggle(href='#', data-toggle='dropdown') Login
+          .dropdown-menu(style='padding: 15px; margin-left: -203px; margin-top:-6px; padding-bottom: 0px;')
+            form(method='post', action='login', accept-charset='UTF-8')
+              input#username(style='margin-bottom: 15px;', type='text', placeholder='Username', name='username')
+              input#password(style='margin-bottom: 15px;', type='password', placeholder='Password', name='password')
+              input#remember-me(style='float: left; margin-right: 10px;', type='checkbox', name='remember-me', value='1')
+              label.string.optional(for='user_remember_me')  Remember me
+              input#sign-in.btn.btn-primary.btn-block(type='submit', value='Sign In')
+
+div.page-contain.container
+  form.span5.form-horizontal(action='', method='POST')
+      fieldset
+          legend Sign up &amp; have some freaking fun!
           
-        .control-group
-        //registration button
-          .controls
-            button.btn.btn-success Register
+          div.control-group
+            label.control-label(for='username') Username
+            div.controls
+              input#username.input-xlarge(type='text', name='username', placeholder='')
+              p.help-block Username can contain any letters or numbers, without spaces
+          
+          div.control-group
+            label.control-label(for='email') E-mail
+            div.controls
+              input#email.input-xlarge(type='text', name='email', placeholder='')
+              p.help-block Please provide your E-mail
+          
+          div.control-group
+            label.control-label(for='password') Password
+            div.controls
+              input#password.input-xlarge(type='password', name='password', placeholder='')
+              p.help-block Password should be at least 4 characters
+          
+          div.control-group
+            label.control-label(for='password_confirm') Confirm Password
+            div.controls
+              input#password_confirm.input-xlarge(type='password', name='password_confirm', placeholder='')
+              p.help-block Please confirm password
+            
+          div.control-group
+            div.controls
+               button.btn.btn-primary(type="submit") Register

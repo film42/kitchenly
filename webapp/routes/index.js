@@ -48,7 +48,10 @@ exports.venue_new_meal = function(req, res) {};
 ***********************************/
 exports.login = function(req, res) {};
 exports.logout = function(req, res) {};
-exports.register = function(req, res) {};
+exports.register = function(req, res) {
+    var viewData = { title: 'kitchen.ly - turn your kitchen into a restaurant' };
+    res.render('register', viewData);
+};
 
 
 
