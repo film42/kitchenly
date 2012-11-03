@@ -58,7 +58,8 @@ div.page-contain.container
                 div.span3.result-box
                     - if (typeof(user.venues) !== 'undefined' && user.venues.length > 0)
                         div.result-main-img-contain
-                          img.result-main-img(src="#{user.venues[0].photo_url}")
+                          a(href="#result-modal-#{index}", data-toggle="modal")
+                            img.result-main-img(src="#{user.venues[0].photo_url}")
                         h4.result-title
                             a(href="#result-modal-#{index}", data-toggle="modal") #{user.venues[0].name}
                                 span.price-range.pull-right //#{user.venues[0].price}
@@ -86,16 +87,17 @@ div.page-contain.container
                           span.city-name #{user.venues[0].location.city}, #{user.venues[0].location.state}
 
                     div.modal-body
+                        img.result-main-img(src="#{user.venues[0].photo_url}")
                         div.meta
-                            div.host-bio
-
-                              img.host-user-img-big.pull-left(src="#{user.photo_url}")
-                              div.host-name #{user.name.first_name} #{user.name.last_name}
-                              div.host-rating
-                                  i.icon-star
-                                  i.icon-star
-                                  i.icon-star
-                                  i.icon-star
 
                     div.modal-footer
-                        a.btn.btn-primary.btn-large(href="#") Book It!
+                        div.host-bio.span3.pull-left
+                          img.host-user-img-big.pull-left(src="#{user.photo_url}")
+                          div.host-name.pull-left #{user.name.first_name} #{user.name.last_name}
+                          div.host-rating.pull-left
+                              i.icon-star
+                              i.icon-star
+                              i.icon-star
+                              i.icon-star
+                        div.pull-right
+                            a.btn.btn-primary.btn-large(href="#") Book It!
