@@ -76,8 +76,8 @@ div.page-contain.container
 
                 img.result-main-img(src="http://placehold.it/140x140")
                 h4.result-title
-                a(href="#result-modal-1", data-toggle="modal") Dinner Title
-                    span.price-range.pull-right $$$
+                    a(href="#result-modal-1", data-toggle="modal") Dinner Title
+                      span.price-range.pull-right $$$
                 div.venue
                     i.icon-map-marker.icon-white
                     span Park City
@@ -132,21 +132,20 @@ div.page-contain.container
         div.modal-header
             button.close(type="button", data-dismiss="modal")&times;
             h3 Dinner Title
-
+            div.location
+              i.icon-map-marker
+              span.city-name Park City
+              
         div.modal-body
             div.meta
-                div.location
-                    i.icon-map-marker.icon-white
-                    Park City
                 div.host-bio
-                img.host-user-img(src="http://placehold.it/23x23")
-                span.host-name
-                    Bilbo Baggins
-                    span.rating
-                        i.icon-star.icon-white
-                        i.icon-star.icon-white
-                        i.icon-star.icon-white
-                        i.icon-star.icon-white
+                  img.host-user-img-big.pull-left(src="img/melissa.png")
+                  div.host-name Melissa Pearl Jones
+                  div.host-rating
+                      i.icon-star
+                      i.icon-star
+                      i.icon-star
+                      i.icon-star
 
         div.modal-footer
             a.btn.btn-primary.btn-large(href="#") Book It!

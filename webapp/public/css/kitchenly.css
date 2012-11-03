@@ -101,6 +101,13 @@ img.result-main-img{
   border-radius: 3px;  
 }
 
+.host-user-img-big {
+  border-radius: 3px;  
+  height: 60px;
+  width: 60px;
+  margin-right: 8px;
+}
+
 h4.result-title {
   margin: 0px;
   color: #fff;
