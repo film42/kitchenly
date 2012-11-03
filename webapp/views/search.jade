@@ -67,65 +67,65 @@ div.page-contain.container
         div.row.result-row
 
             each user, index in users
-                div.span3.result-box
-                    - if (typeof(user.venues) !== 'undefined' && user.venues.length > 0)
+                - if (typeof(user.venues) !== 'undefined' && user.venues.length > 0)
+                    div.span3.result-box
                         div.result-main-img-contain
                           a(href="#result-modal-#{index}", data-toggle="modal")
                             img.result-main-img(src="../images/#{user.venues[0].photo_url}")
                         h4.result-title
                             a(href="#result-modal-#{index}", data-toggle="modal") #{user.venues[0].name}
                                 span.price-range.pull-right //#{user.venues[0].price}
-                    div.venue
-                        i.icon-map-marker.icon-white
-                        - if (typeof(user.venues) !== 'undefined' && user.venues.length > 0 && user.venues[0].location)
-                            span #{user.venues[0].location.city}, #{user.venues[0].location.state}
+                        div.venue
+                            i.icon-map-marker.icon-white
+                            - if (typeof(user.venues) !== 'undefined' && user.venues.length > 0 && user.venues[0].location)
+                                span #{user.venues[0].location.city}, #{user.venues[0].location.state}
 
-                    div.result-meta
-                        div.host-bio
-                            img.host-user-img.pull-left(src="../images/#{user.photo_url}")
-                            div.host-name #{user.name.first_name} #{user.name.last_name}
-                            div.host-rating
-                                i.icon-star.icon-white
-                                i.icon-star.icon-white
-                                i.icon-star.icon-white
-                                i.icon-star.icon-white
+                        div.result-meta
+                            div.host-bio
+                                img.host-user-img.pull-left(src="../images/#{user.photo_url}")
+                                div.host-name #{user.name.first_name} #{user.name.last_name}
+                                div.host-rating
+                                    i.icon-star.icon-white
+                                    i.icon-star.icon-white
+                                    i.icon-star.icon-white
+                                    i.icon-star.icon-white
 
-                div.modal.hide(id="result-modal-#{index}")
-                    div.modal-header
-                        button.close(type="button", data-dismiss="modal") &times;
-                        h3 #{user.venues[0].name}
-                        div.location
-                            i.icon-map-marker
-                            span.city-name #{user.venues[0].location.city}, #{user.venues[0].location.state}
+                    div.modal.hide(id="result-modal-#{index}")
+                        div.modal-header
+                            button.close(type="button", data-dismiss="modal") &times;
+                            h3 #{user.venues[0].name}
+                            div.location
+                                i.icon-map-marker
+                                span.city-name #{user.venues[0].location.city}, #{user.venues[0].location.state}
 
-                    div.modal-body
-                        img.result-main-img(src="../images/#{user.venues[0].photo_url}")
-                        div.meta
+                        div.modal-body
+                            img.result-main-img(src="../images/#{user.venues[0].photo_url}")
+                            div.meta
 
-                    div.modal-footer
-                        div.host-bio.span3.pull-left
-                            img.host-user-img-big.pull-left(src="../images/#{user.photo_url}")
-                            div.host-name.pull-left #{user.name.first_name} #{user.name.last_name}
-                            div.host-rating.pull-left
-                                i.icon-star
-                                i.icon-star
-                                i.icon-star
-                                i.icon-star
-                        div.pull-right
-                            span Description:
-                            span #{user.description}
-                            span Guest Limits:
-                            - if (user.guest_limit)
-                                span #{user.guest_limit.minimum}
-                                span #{user.guest_limit.maximum}
-                            span Specialties:
-                            - if (user.specialties)
-                                span #{user.specialties}
-                                each specialty in user.specialties
-                                    span #{specialty}
-                            span Reviews:
-                            - if (user.reviews)
-                                each review in user.reviews
-                                    span #{review.comment}
-                                    span #{review.rating}
-                            a.book-now.btn.btn-primary.btn-large(id="book-now-modal-#{index}", href="#", data-uname="#{user.username}", data-uid="#{user._id}") Book It!
+                        div.modal-footer
+                            div.host-bio.span3.pull-left
+                                img.host-user-img-big.pull-left(src="../images/#{user.photo_url}")
+                                div.host-name.pull-left #{user.name.first_name} #{user.name.last_name}
+                                div.host-rating.pull-left
+                                    i.icon-star
+                                    i.icon-star
+                                    i.icon-star
+                                    i.icon-star
+                            div.pull-right
+                                span Description:
+                                span #{user.description}
+                                span Guest Limits:
+                                - if (user.guest_limit)
+                                    span #{user.guest_limit.minimum}
+                                    span #{user.guest_limit.maximum}
+                                span Specialties:
+                                - if (user.specialties)
+                                    span #{user.specialties}
+                                    each specialty in user.specialties
+                                        span #{specialty}
+                                span Reviews:
+                                - if (user.reviews)
+                                    each review in user.reviews
+                                        span #{review.comment}
+                                        span #{review.rating}
+                                a.book-now.btn.btn-primary.btn-large(id="book-now-modal-#{index}", href="#", data-uname="#{user.username}", data-uid="#{user._id}") Book It!
