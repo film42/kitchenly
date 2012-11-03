@@ -29,7 +29,7 @@ body.has-bg-photo {
 
 .site-header {
   background: #A02654;
-  height: 68px;
+  height: 68px;  
 }
 
 .kitchenly-branding {
@@ -41,7 +41,7 @@ body.has-bg-photo {
   display: block;
   margin: 0px;
   color: #fff;
-  font-size: 20px;
+  font-size: 22px;
   letter-spacing: 0.8pt;
   background: transparent url('../img/kitchenly-logo.png') no-repeat 0px 8px;
   text-indent: 62px;
