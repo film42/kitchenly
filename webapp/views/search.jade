@@ -1,7 +1,13 @@
-header.site-header(role="page-header")
-    div.container
-        h1.kitchenly-branding
-            a(href="/") kitchen.ly
+header.site-header 
+  div.container
+    h1.kitchenly-branding.tk-mic-32-new-web.pull-left 
+      a(href='/') kitchen.ly
+    div.pull-right
+      ul#user-nav.unstyled.nav.nav-pills
+        li.pull-left 
+          a.sign-up-link(href='/') Sign Up
+        li.pull-left
+          a.sign-in-link(href='/') Login 
 
 div.page-contain.container
     div#navbar-secondary.navbar.navbar-inverse
@@ -18,7 +24,7 @@ div.page-contain.container
                         i.icon-calendar
 
                 div#guest-number-picker.btn-group.pull-left
-                    button.btn.dropdown-toggle(data-toggle="dropdown") 2 guests
+                    button.btn.dropdown-toggle.span2(data-toggle="dropdown") 2 guests
                         i.icon-user.pull-right
                     ul.dropdown-menu
                         li
@@ -38,7 +44,8 @@ div.page-contain.container
                         li
                             a(href="#") 8 Guests
 
-                button.btn.btn-primary.pull-left(type="submit") Search for Dinner
+                div#search-button.btn-group.pull-left
+                  button.btn.btn-primary.span2(type="submit") Search for Dinner
 
     div.search-results-contain
     div.map

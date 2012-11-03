@@ -140,16 +140,40 @@ h4.result-title {
   margin-top: 20px;
 }
 
-#navbar-main .navbar-inner {
+#navbar-secondary input, #navbar-secondary .add-on {
+  top: -1px;
+  position: relative;
+}
+
+#navbar-main .navbar-inner, #navbar-secondary .navbar-inner {
   padding-right: 0px;
+  padding-left: 0px;
+  
 }
 
-.navbar-form {
-  margin-left: -16px;
+#navbar-secondary .navbar-inner {
+  
 }
 
-.navbar-form div {
-  margin-right: 4px;
+#navbar-main .navbar-form {
+ margin-left: 5px;
+}
+
+#navbar-main .navbar-form div {
+ margin-right: 3px;
+}
+
+#navbar-main #guest-number-picker .btn{
+  width: 160px;
+  text-align: left;
+}
+
+#navbar-secondary .navbar-form {
+ margin-left: 8px;
+}
+
+#navbar-secondary .navbar-form div {
+ margin-right: 6px;
 }
 
 #navbar-main input {
@@ -176,21 +200,40 @@ h4.result-title {
   background: #2B2B29;
   margin-left: 0px;
   padding: 20px;
+  padding-bottom: 32px;
   margin-bottom: 68px;
-  
 }
 
 #guest-number-picker .btn{
-  width: 160px;
+ /* width: 160px;*/
   text-align: left;
-  
+}
+
+#search-button {
+  margin-left: 0;
+}
+
+.footer-contain {
+  display: none;
+}
+
+.footer {
+  padding-left: 16px;
+  padding-top: 22px;
+  background: #fff;
+  height: 54px;
 }
 
 a.social-link {
   text-decoration: none;
   font-size: 42px;
-  color: #fff;  
+  line-height: 42px;
+  color: #333;  
   margin: 6px;
+  display: inline-block;
+  padidng: 0px;
+  margin: 0px;
+  margin-right: 12px;
 }
 
 a:hover.social-link {

@@ -15,9 +15,9 @@ exports.index = function(req, res){
 */
 
 exports.index = function(req, res) {
-  	res.render('index', { title: "hello" });
+    var viewData = { title: 'kitchen.ly - turn your kitchen into a restaurant' };
+  	res.render('index', viewData);
 };
-
 
 // Get the search results page.
 exports.search = function(req, res) {
@@ -40,9 +40,9 @@ exports.user = function(req, res) {
     });
 };*/
 
-exports.index = function(req, res) {
-  	res.render('index', { title: "hello" });
-};
+//exports.index = function(req, res) {
+//  	res.render('index', { title: "hello" });
+//};
 
 /***********************************
     	User Page
