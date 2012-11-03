@@ -1,10 +1,19 @@
-!!!
-html
+!!!.
+  <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+  <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+  <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+  <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->  
   head
     title= title
     
     link(rel='stylesheet', href='/bootstrap/css/bootstrap.css')
     link(rel='stylesheet', href='/bootstrap/css/responsive.css')
     link(rel='stylesheet', href='/css/kitchenly.css')
+    
+    block scripts
+      script(src='/scripts/vendor/modernizr-2.5.3.min.js')
+        
+      <script type="text/javascript" src="//use.typekit.net/jnr8raz.js"></script>
+      <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     
   body.has-bg-photo!= body
