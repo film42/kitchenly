@@ -163,11 +163,11 @@ h4.result-title {
 }
 
 #navbar-main .navbar-form {
- margin-left: 5px;
+ margin-left: 4px;
 }
 
 #navbar-main .navbar-form div {
- margin-right: 3px;
+ margin-right: 4px;
 }
 
 #navbar-main #guest-number-picker .btn{
@@ -250,4 +250,36 @@ a:hover.social-link {
 .rule {
   margin-top: 32px;
   border-top: #fff;
+}
+
+#calendar-picker {
+  width: 230px;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+#calendar-picker th.buttons {
+
+}
+#calendar-picker .btn-group {
+  width: 100%;
+  margin: 0px;
+}
+
+#calendar-picker .btn-group .center-btn {
+  width: 120px;
+}
+
+#calendar-picker td, #calendar-picker th {
+  width: 32px;
+  height: 32px;
+  border-bottom: 1px solid #ccc;
+  padding: 0px;
+  text-align: center;
+  line-height: 32px;
+  color: #333;
+}
+
+#calendar-picker th {
+  padding-top: 2px;
 }
