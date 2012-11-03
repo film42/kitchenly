@@ -1,7 +1,145 @@
-h1= title
-    div
-        table
-            each user in users
-                tr
-                    td #{user.name.first_name}
-                    td #{user.name.last_name}
+header.site-header(role="page-header")
+    div.container
+        h1.kitchenly-branding
+            a(href="/") kitchen.ly
+
+div.page-contain.container
+    div.navbar.navbar-inverse
+        div.navbar-inner
+            form.navbar-form.pull-left
+                div.input-append.pull-left
+                    input#appendedInput.span3(type="text", placeholder="What city do you want to eat in?")
+                    span.add-on
+                        i.icon-map-marker
+
+                div.input-append.pull-left
+                    input#appendedInput.span3(type="text", placeholder="When do you want to eat?")
+                    span.add-on
+                        i.icon-calendar
+
+                div.btn-group.pull-left
+                    button.btn.dropdown-toggle(data-toggle="dropdown") 2 guests
+                        i.icon-user
+                    ul.dropdown-menu
+                        li
+                            a(href="#") 1 Guest
+                        li
+                            a(href="#") 2 Guests
+                        li
+                            a(href="#") 3 Guests
+                        li
+                            a(href="#") 4 Guests
+                        li
+                            a(href="#") 5 Guests
+                        li
+                            a(href="#") 6 Guests
+                        li
+                            a(href="#") 7 Guests
+                        li
+                            a(href="#") 8 Guests
+
+                    button.btn.btn-primary.pull-left(type="submit") Search for Dinner
+
+    div.search-results-contain
+    div.map
+
+    div.result-grid.container
+        div.row.result-row
+
+            div.span3.result-box
+                img.result-main-img(src="http://placehold.it/140x140")
+                h4.result-title
+                    a(href="#result-modal-1", data-toggle="modal") Dinner Title
+                        span.price-range.pull-right$$$
+                div.venue
+                    i.icon-map-marker.icon-white
+                    span Park City
+
+                div.result-meta
+                    div.host-bio
+                        img.host-user-img.pull-left(src="img/melissa.png")
+                        div.host-name Melissa Pearl Jones
+                        div.host-rating
+                            i.icon-star.icon-white
+                            i.icon-star.icon-white
+                            i.icon-star.icon-white
+                            i.icon-star.icon-white
+
+            div.span3.result-box
+
+                img.result-main-img(src="http://placehold.it/140x140")
+                h4.result-title
+                a(href="#result-modal-1", data-toggle="modal") Dinner Title
+                    span.price-range.pull-right $$$
+                div.venue
+                    i.icon-map-marker.icon-white
+                    span Park City
+
+                div.result-meta
+                    div.host-bio
+                        img.host-user-img(src="http://placehold.it/23x23") Bilbo Baggins
+                        span.rating
+                            i.icon-star.icon-white
+                            i.icon-star.icon-white
+                            i.icon-star.icon-white
+                            i.icon-star.icon-white
+
+            div.span3.result-box
+
+                img.result-main-img(src="img/lasagna.jpg")
+                h4.result-title
+                    a(href="#result-modal-1", data-toggle="modal") Dinner Title
+                        span.price-range.pull-right $$$
+                div.venue
+                    i.icon-map-marker.icon-white
+                    span Park City
+
+                div.result-meta
+                    div.host-bio
+                        img.host-user-img(src="http://placehold.it/23x23") Bilbo Baggins
+                        span.rating
+                            i.icon-star.icon-white
+                            i.icon-star.icon-white
+                            i.icon-star.icon-white
+                            i.icon-star.icon-white
+
+            div.span3.result-box
+                img.result-main-img(src="http://placehold.it/140x140")
+                h4.result-title
+                    a(href="#result-modal-1", data-toggle="modal") Dinner Title
+                        span.price-range.pull-right $$$
+                div.venue
+                    i.icon-map-marker.icon-white
+                    span Park City
+
+                div.result-meta
+                    div.host-bio
+                        img.host-user-img(src="http://placehold.it/23x23") Bilbo Baggins
+                        span.rating
+                            i.icon-star.icon-white
+                            i.icon-star.icon-white
+                            i.icon-star.icon-white
+                            i.icon-star.icon-white
+
+    div#result-modal-1.modal.hide
+        div.modal-header
+            button.close(type="button", data-dismiss="modal")&times;
+            h3 Dinner Title
+
+        div.modal-body
+            div.meta
+                div.location
+                    i.icon-map-marker.icon-white
+                    Park City
+                div.host-bio
+                img.host-user-img(src="http://placehold.it/23x23")
+                span.host-name
+                    Bilbo Baggins
+                    span.rating
+                        i.icon-star.icon-white
+                        i.icon-star.icon-white
+                        i.icon-star.icon-white
+                        i.icon-star.icon-white
+
+        div.modal-footer
+            a.btn.btn-primary.btn-large(href="#") Book It!

@@ -17,17 +17,19 @@ exports.index = function(req, res){
 exports.index = function(req, res) {
   	res.render('index', { title: "hello" });
 };
-/*
+
+
 // Get the search results page.
-exports.searchResults = function(req, res) {
-    couchdb.getAllUsers(function(users) {
-        //var users = { };
+exports.search = function(req, res) {
+//    couchdb.getAllUsers(function(users) {
+        var users = { };
         var viewData = { title: 'Search results' };
         viewData.users = users;
         res.render('search', viewData);
-    });
+//    });
 };
 
+ /*
 // Get the user details page.
 exports.user = function(req, res) {
     couchdb.getUserById(req.userId, true, function(user) {

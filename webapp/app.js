@@ -78,6 +78,8 @@ app.get(app.lookupRoute('auth.login'), routes.login);
 app.get(app.lookupRoute('auth.logout'), routes.logout);
 app.get(app.lookupRoute('auth.register'), routes.register);
 
+app.get(app.lookupRoute('search'), routes.search);
+
 
 app.listen(3000, function(){
   console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
