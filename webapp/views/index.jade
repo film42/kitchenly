@@ -22,11 +22,11 @@ div.page-contain.container
     div.navbar-inner
       form(class="navbar-form pull-left")
         div#city-picker.input-append.pull-left
-            input(type="input", data-provide="typeahead", placeholder="What city do you want to eat in?")#date-time.span4
+            input(type="input", data-provide="typeahead", placeholder="What city do you want to eat in?")#location.typeahead.span4
             span.add-on
               span.ss-icon.ss-standard location
         div#date-picker.input-append.pull-left
-            input(type="input", placeholder="When do you want to eat?")#location.span4
+            input(type="input", placeholder="When do you want to eat?")#date-time.span4
             span.add-on
               span.ss-icon.ss-standard date
                       
@@ -51,10 +51,9 @@ div.page-contain.container
                 li
                   a(href="#") 8 Guests
                   
-        button.btn.btn-primary.btn-large.pull-left(type="submit") Search for Dinner
-
-  div#calendar-picker
-    a.btn(href='#', rel='popover', data-placement='bottom', data-original-title='popover title') popover button
+        button.btn.btn-primary.btn-large.pull-left(type="submit") Search for Dinner  
+  
+  div#calendar-picker.hide
     table.table-bordered.table-striped.table-collapsed
         thead
           tr
@@ -65,7 +64,6 @@ div.page-contain.container
                 a.btn.center-btn November 2012
                 a.btn
                   i.icon-chevron-right
-          
           tr
             th Sun
             th Mon
@@ -119,4 +117,3 @@ div.page-contain.container
             td.muted 1
             td.muted 2  
             td.muted 3
-
