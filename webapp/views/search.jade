@@ -1,7 +1,7 @@
 block scripts
    script(src='http://maps.google.com/maps/api/js?sensor=false')
    script(src='/scripts/map.js')
-    script(src='/scripts/searchResults.js')
+   script(src='/scripts/searchResults.js')  
 
 header.site-header
   div.container
@@ -37,7 +37,7 @@ div.page-contain.container
 
                 div#guest-number-picker.btn-group.pull-left
                     button.btn.dropdown-toggle.span2(data-toggle="dropdown") 
-                        span.num 2 guests
+                        span.num 4 guests
                         i.icon-user.pull-right
                     ul.dropdown-menu
                         li
@@ -82,7 +82,7 @@ div.page-contain.container
 
                         div.result-meta
                             div.host-bio
-                                img.host-user-img.pull-left(src="../images/#{user.photo_url}")
+                                img.host-user-img.pull-left(src="#{user.photo_url}")
                                 div.host-name #{user.name.first_name} #{user.name.last_name}
                                 div.host-rating
                                     i.icon-star.icon-white
@@ -99,33 +99,36 @@ div.page-contain.container
                                 span.city-name #{user.venues[0].location.city}, #{user.venues[0].location.state}
 
                         div.modal-body
-                            img.result-main-img(src="../images/#{user.venues[0].photo_url}")
-                            div.meta
-
-                        div.modal-footer
-                            div.host-bio.span3.pull-left
-                                img.host-user-img-big.pull-left(src="../images/#{user.photo_url}")
+                            img.pull-left(src="../images/#{user.venues[0].photo_url}",style="width:200px; min-width:200px;")      
+                            div.host-bio.span3.pull-right
+                                img.host-user-img-big.pull-left(src="#{user.photo_url}")
                                 div.host-name.pull-left #{user.name.first_name} #{user.name.last_name}
                                 div.host-rating.pull-left
                                     i.icon-star
                                     i.icon-star
                                     i.icon-star
                                     i.icon-star
-                            div.pull-right
-                                span Description:
-                                span #{user.description}
-                                span Guest Limits:
+
+                                div#description.tab-content
+                                    span Description:
+                                    span #{user.description}    
+
+                                div#specialties.tab-content
+                                    span Specialties:
+                                    - if (user.specialties)
+                                        span #{user.specialties}
+                                        each specialty in user.specialties
+                                            span #{specialty}
+                                div#previews.tab-content
+                                    span Reviews:
+                                    - if (user.reviews)
+                                        each review in user.reviews
+                                            span #{review.comment}
+                                            span #{review.rating}
+                        div.modal-footer
+                                span 
                                 - if (user.guest_limit)
                                     span #{user.guest_limit.minimum}
                                     span #{user.guest_limit.maximum}
-                                span Specialties:
-                                - if (user.specialties)
-                                    span #{user.specialties}
-                                    each specialty in user.specialties
-                                        span #{specialty}
-                                span Reviews:
-                                - if (user.reviews)
-                                    each review in user.reviews
-                                        span #{review.comment}
-                                        span #{review.rating}
-                                a.book-now.btn.btn-primary.btn-large(id="book-now-modal-#{index}", href="#", data-uname="#{user.username}", data-uid="#{user._id}") Book It!
+
+                                a.book-now.btn.btn-primary.btn-large(id="book-now-modal-#{index}", href="/payment?id=#{user.venues[0]._id}", data-uname="#{user.username}", data-uid="#{user._id}") Book It!

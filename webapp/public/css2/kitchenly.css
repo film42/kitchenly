@@ -340,9 +340,3 @@ a:hover.day {
   background: #44A1E1;
   color: #fff;
 }
-
-.logo-big {
-  background: #44A1E1 url('/img/logo-big.png') no-repeat center;
-  width: 500px;
-  height: 500px;
-}

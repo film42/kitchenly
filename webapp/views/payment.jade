@@ -22,33 +22,53 @@ header.site-header
               input#sign-in.btn.btn-primary.btn-block(type='submit', value='Sign In')
 
 div.page-contain.container
-    h1 Make Payment
-    div#stripe-form
-      form(action="", method="POST",id="payment-form")
-        div.form-row
-          div.cc-type Card Type
-          select.card-type
-            option(value="Visa", selected) VISA
-            option(value="American Express") American Express 
-            option(value="MasterCard") MasterCard
-            option(value="Discover") Discover
-            option(value="JCB") JCB 
-            option(value="Diners Club") Diners Club
-        div.form-row
-          div.cc-text Card card-number
-          input(type="text",size="30",autocomplete="off",class="card-number",value="4242424242424242")
-        div.form-row
-          div.cc-text CVC
-          input(type="text",size="4",autocomplete="off",class="card-cvc",value="123")
-        div.form-row
-          div.cc-text Expiration (MM/YYYY)
-          input(type="text",size="2",class="card-expiry-month",value="12")
-          span /
-          input(type="text",size="4",class="card-expiry-year",value="2012")
-        div.form-row
-          input(type="hidden",name="amount",value="2000",id="cc-amount")
-          input(type="hidden",name="currency",value="usd",id="cc-currency")
-        div.form-row
-          button(type="submit",class="submit-button btn btn-submit btn-primary") Submit Payment
-        div.form-row
-          div#errors.hidden
+    h1.span12 Reserve your dinner
+    
+    table#payment-table.table-bordered.table-striped.table-collapsed.span7.pull-left
+        tr
+          th Item
+          th Price
+          th Quantity
+          th Total
+        tr
+          if(venue)
+            td= venue.description
+            td= venue.meals[0].price
+            td 4
+            td $#{parseInt(venue.meals[0].price.slice(1,10) * 4)}
+          else
+            td Romantic and Delicious Dinner
+            td $20 / person
+            td 2 guests
+            td $40
+        
+      div#stripe-form.span7.pull-left
+        form(action="", method="POST",id="payment-form")
+          legend Enter Payment Info
+          div.form-row
+            div.cc-type Card Type
+            select.card-type
+              option(value="Visa", selected) VISA
+              option(value="American Express") American Express 
+              option(value="MasterCard") MasterCard
+              option(value="Discover") Discover
+              option(value="JCB") JCB 
+              option(value="Diners Club") Diners Club
+          div.form-row
+            div.cc-text Card card-number
+            input(type="text",size="30",autocomplete="off",class="card-number",value="4242424242424242")
+          div.form-row
+            div.cc-text CVC
+            input(type="text",size="4",autocomplete="off",class="card-cvc",value="123")
+          div.form-row
+            div.cc-text Expiration (MM/YYYY)
+            input(type="text",size="2",class="card-expiry-month",value="12")
+            span /
+            input(type="text",size="4",class="card-expiry-year",value="2012")
+          div.form-row
+            input(type="hidden",name="amount",value="2000",id="cc-amount")
+            input(type="hidden",name="currency",value="usd",id="cc-currency")
+          div.form-row
+            button(type="submit",class="submit-button btn btn-large btn-submit btn-primary") Send Payment
+          div.form-row
+            div#errors.hidden

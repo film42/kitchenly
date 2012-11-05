@@ -1,0 +1,32 @@
+block scripts
+  script(src='https://js.stripe.com/v1/')
+  script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js')
+  script(src='/scripts/payment.js')
+
+header.site-header 
+  div.container
+    h1.kitchenly-branding.tk-mic-32-new-web.pull-left 
+      a(href='/') kitchen.ly
+    div.pull-right
+      ul#user-nav.unstyled.nav.nav-pills
+        li.pull-left 
+          a.sign-up-link(href='/') Sign Up
+        li.dropdown.pull-left
+          a.dropdown-toggle(href='#', data-toggle='dropdown') Login
+          .dropdown-menu(style='padding: 15px; margin-left: -203px; margin-top:-6px; padding-bottom: 0px;')
+            form(method='post', action='login', accept-charset='UTF-8')
+              input#username(style='margin-bottom: 15px;', type='text', placeholder='Username', name='username')
+              input#password(style='margin-bottom: 15px;', type='password', placeholder='Password', name='password')
+              input#remember-me(style='float: left; margin-right: 10px;', type='checkbox', name='remember-me', value='1')
+              label.string.optional(for='user_remember_me')  Remember me
+              input#sign-in.btn.btn-primary.btn-block(type='submit', value='Sign In')
+
+div.page-contain.container
+  div.row
+    div.span6
+      h1 Thanks for using kitchen.ly! 
+      h3.tk-pt-serif You're adventurous and awesome!
+      div.alert you will get an email conformation of you reservation
+
+  div.row
+    div.logo-big.span6

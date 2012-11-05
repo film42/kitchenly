@@ -36,6 +36,7 @@ app.configure('production', function(){
 ***********************************/
 app.defineRoute('search', '/search');
 app.defineRoute('payment', '/payment');
+app.defineRoute('thankyou', '/thankyou');
 
 app.defineRoute('user', {
   index: '/user/:username',
@@ -65,6 +66,7 @@ app.defineRoute('/blog/new', '/blog/new');
 ***********************************/
 app.get('/', routes.index);
 app.get('/payment', routes.payment);
+app.get('/thankyou', routes.thankyou);
 // Users
 app.get(app.lookupRoute('user.index'), routes.user_index);
 app.get(app.lookupRoute('user.reservations'), routes.user_reservations);
@@ -102,7 +104,7 @@ app.post("/payment", function(req, res) {
       var id = customer.id;
       console.log('Success! Customer with Stripe ID ' + id + ' just signed up!');
       // save this customer to your database here!
-      res.send('ok');
+      res.redirect('/thankyou');
     }
   });
 });

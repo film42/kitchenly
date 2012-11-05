@@ -9,7 +9,7 @@ header.site-header
     div.pull-right
       ul#user-nav.unstyled.nav.nav-pills
         li.pull-left 
-          a.sign-up-link(href='/') Sign Up
+          a.sign-up-link(href='/register') Sign Up
         li.dropdown.pull-left
           a.dropdown-toggle(href='#', data-toggle='dropdown') Login
           .dropdown-menu(style='padding: 15px; margin-left: -203px; margin-top:-6px; padding-bottom: 0px;')
@@ -27,7 +27,7 @@ div.page-contain.container
 
   div#navbar-main.navbar.navbar-inverse    
     div.navbar-inner
-      form(class="navbar-form pull-left")
+      form(class="navbar-form pull-left searchly" )
         div#city-picker.input-append.pull-left
             input(type="input", data-provide="typeahead", placeholder="What city do you want to eat in?")#location.typeahead.span4
             span.add-on
@@ -59,4 +59,4 @@ div.page-contain.container
                 li
                   a(href="#") 8 Guests
                   
-        a#search-button.btn.btn-primary.btn-large.pull-left(href="/search") Search for Dinner  
+        button#search-button.btn.btn-primary.btn-large.pull-left(type="submit") Search for Dinner  

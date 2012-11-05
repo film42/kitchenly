@@ -5,8 +5,18 @@ exports.index = function(req, res) {
   	res.render('index', viewData);
 };
 
-exports.payment = function(req, res) {
-    res.render('payment', { title: "payment" });
+exports.thankyou =function(req, res) {
+    res.render('thankyou', {title: "Thak You!"});
+}
+
+exports.payment = function(req, res) {  
+    if(req.query.id)
+    couchdb.getVenueById(req.query.id, true, function(data) {
+        res.render('payment', { title: "payment", venue: data });
+        console.log(data);
+    });
+        
+    else res.render('payment', { title: "payment", venue: null });
 };
 
 // Get the search results page.
